@@ -1,0 +1,17 @@
+/*
+Theme Name: MentorUP
+Theme URI: 
+Description: MentorUP theme built with Bootstrap
+Author: MentorUP
+Author URI: http://www.mentorupalberta.com/
+Version: 1.0
+Tags: responsive, white, bootstrap
+*/
+
+@import url('bootstrap/css/bootstrap.css');
+@import url('bootstrap/css/bootstrap-responsive.css');
+
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
