@@ -8,10 +8,33 @@ Version: 1.0
 Tags: responsive, white, bootstrap
 */
 
-@import url('bootstrap/css/bootstrap.css');
-@import url('bootstrap/css/bootstrap-responsive.css');
+@import url('bootstrap-2/css/bootstrap.css');
+@import url('bootstrap-2/css/bootstrap-responsive.css');
 
 body {
 	padding-top: 60px;
 	padding-bottom: 40px;
+}
+
+#header_logo {
+	height: 20px;
+}
+
+/* footer */
+.footer-area-1 {
+	background-color: #444242; 
+	padding-bottom: 40px; 
+	color: #CCCCCC;
+}
+.footer-area-1 p {
+	color: #8C8989;
+}
+
+.footer-area-2 {
+	background-color: #1B1919; 
+	padding-bottom: 40px; 
+	color: #CCCCCC;
+}
+.footer-area-2 p {
+	color: #8C8989;
 }
