@@ -13,9 +13,9 @@
 	<?php endif; ?>
 
   </div>
-  <div class="span4">
+<!--   <div class="span4">
 	<h2>Sidebar</h2>	
-  </div>
+  </div> -->
 </div>
 
 
