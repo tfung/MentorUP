@@ -105,3 +105,29 @@ img {
 	display: block;
 	background: rgba(0,0,0,.6);
 } 
+
+/* Sidebar */
+#archives > ul {
+	list-style: none;
+	margin-left: 0;
+}
+#archives > .widget-title {
+	color: #444242;
+}
+#archives > ul > li > a {
+	color: #1B1919;
+}
+
+/* Post Item */
+.post-item {
+	margin: 25px 0 25px 0;
+	padding: 25px 0 25px 0;
+}
+.post-divider {
+	background-color: #000;
+	height: 1px;
+}
+.post-meta {
+	color: #777;
+	text-decoration: underline;
+}
