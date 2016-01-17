@@ -6,16 +6,15 @@ register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'wpbootstrap' ),
 ) );
 
-function wpbootstrap_scripts_with_jquery()
+function enqueue_javascript()
 {
-	// Register the script like this for a theme:
-	wp_register_script( 'custom-script', get_template_directory_uri() . '/bootstrap/js/bootstrap.js', array( 'jquery' ) );
-	wp_register_script( 'custom-script2', get_template_directory_uri() . '/assets/js/base.js', array( 'jquery' ) );
-	// For either a plugin or a theme, you can then enqueue the script:
-	wp_enqueue_script( 'custom-script' );
-	wp_enqueue_script( 'custom-script2' );
+	wp_register_script( 'bootstrap_js', get_template_directory_uri() . '/bootstrap/js/bootstrap.js', array( 'jquery' ), '3.3.6', true );
+	wp_register_script( 'base_js', get_template_directory_uri() . '/assets/js/base.js', array( 'jquery' ), '3.3.6', true );
+
+	wp_enqueue_script( 'bootstrap_js' );
+	wp_enqueue_script( 'base_js' );
 }
-add_action( 'wp_enqueue_scripts', 'wpbootstrap_scripts_with_jquery' );
+add_action( 'wp_enqueue_scripts', 'enqueue_javascript' );
 
 if ( function_exists('register_sidebar') )
 	register_sidebar(array(

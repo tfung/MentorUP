@@ -22,6 +22,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_enqueue_script("jquery"); ?>
     <?php wp_head(); ?>
   </head>
@@ -30,7 +31,7 @@
     <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" target="#navbar-list" aria-expanded="false">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-list" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -47,23 +48,19 @@
           </a>
         </div>
 
-        <div id="navbar-list" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <?php
-              wp_nav_menu( array(
-                  'menu'              => 'primary',
-                  'theme_location'    => 'primary',
-                  'depth'             => 2,
-                  'container'         => 'div',
-                  'container_class'   => 'collapse navbar-collapse',
-                  'container_id'      => 'bs-example-navbar-collapse-1',
-                  'menu_class'        => 'nav navbar-nav',
-                  'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                  'walker'            => new wp_bootstrap_navwalker())
-              );
-            ?>
-          </ul>
-        </div>
+        <?php
+          wp_nav_menu( array(
+              'menu'              => 'primary',
+              'theme_location'    => 'primary',
+              'depth'             => 2,
+              'container'         => 'div',
+              'container_class'   => 'collapse navbar-collapse',
+              'container_id'      => 'navbar-list',
+              'menu_class'        => 'nav navbar-nav navbar-right',
+              'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+              'walker'            => new wp_bootstrap_navwalker())
+          );
+        ?>
 
     </div>
   </nav>
