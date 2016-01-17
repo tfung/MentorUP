@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="row">
-  <div class="span8">
+  <div class="col-md-8">
     <h1>News</h1>
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -15,7 +15,7 @@
     <?php endif; ?>
 
   </div>
-  <div class="span4">
+  <div class="col-md-4">
 
     <?php get_sidebar(); ?>   
 

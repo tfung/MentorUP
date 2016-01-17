@@ -27,43 +27,46 @@
   </head>
   <body>
 
-  <div class="navbar navbar-default navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <a class="brand" href="<?php echo site_url(); ?>">
-          <?php
-            if (!empty($logo_url)) {
-              echo "<img id=\"header_logo\" src=\"$logo_url\" >";
-            } else {
-              echo bloginfo('name');;
-            }
-          ?>
-        </a>
+    <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" target="#navbar-list" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="<?php echo site_url(); ?>">
+              <?php
+                if (!empty($logo_url)) {
+                  echo "<img id=\"header_logo\" src=\"$logo_url\" >";
+                } else {
+                  echo bloginfo('name');;
+                }
+              ?>
+          </a>
+        </div>
 
-        <div class="nav-collapse collapse">
-           <?php
-            wp_nav_menu( array(
-                'menu'              => 'primary',
-                'theme_location'    => 'primary',
-                'depth'             => 2,
-                //'container'         => 'div',
-                //'container_class'   => 'collapse navbar-collapse',
-                'container_id'      => 'bs-example-navbar-collapse-1',
-                'menu_class'        => 'nav navbar-nav',
-                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                'walker'            => new wp_bootstrap_navwalker())
-            );
-          ?>
-          </div>
+        <div id="navbar-list" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <?php
+              wp_nav_menu( array(
+                  'menu'              => 'primary',
+                  'theme_location'    => 'primary',
+                  'depth'             => 2,
+                  'container'         => 'div',
+                  'container_class'   => 'collapse navbar-collapse',
+                  'container_id'      => 'bs-example-navbar-collapse-1',
+                  'menu_class'        => 'nav navbar-nav',
+                  'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                  'walker'            => new wp_bootstrap_navwalker())
+              );
+            ?>
+          </ul>
+        </div>
 
-      </div>
     </div>
-  </div>
+  </nav>
 
   <?php
     if (is_front_page()) {

@@ -2,7 +2,7 @@
 
 	<?php if ( have_posts() ) : ?>
 		<div class="row">
-		  	<div class="span7">
+		  	<div class="col-md-8">
 		  		<?php 
 	  				echo "<div class=\"post-item\">";
 	  				the_post(); 
@@ -27,7 +27,7 @@
 			  		}
 		  		?>
 		  	</div>
-			<div class="span3 offset1">
+			<div class="col-md-4">
 				<?php get_sidebar(); ?>
 			</div>
 		</div>
