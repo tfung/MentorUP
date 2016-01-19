@@ -6,23 +6,19 @@
 
   $logo_url = get_theme_mod('Site Logo');
 ?>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>MentorUP Alberta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Le styles -->
     <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
-    <!--link href="./custom.css" rel="stylesheet"-->
 
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_enqueue_script("jquery"); ?>
     <?php wp_head(); ?>
   </head>
@@ -40,7 +36,7 @@
           <a class="navbar-brand" href="<?php echo site_url(); ?>">
               <?php
                 if (!empty($logo_url)) {
-                  echo "<img id=\"header_logo\" src=\"$logo_url\" >";
+                  echo "<img src=\"$logo_url\" >";
                 } else {
                   echo bloginfo('name');;
                 }
@@ -73,4 +69,3 @@
     }
   ?>
 
-  <!--div class="container"-->

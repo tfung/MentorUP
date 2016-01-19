@@ -22,6 +22,15 @@
           </div>
         </div>
       </div>
+      <div class="item">
+        <img src="http://www.oregonscenics.com/s-n-p-ci-wide.jpg" alt="">
+        <div class="container">
+          <div class="carousel-caption">
+              <h1></h1><br/>
+            <p class="lead">Our mission is to build a community of: professionals at all stages of their careers, potential employers, professional associations, volunteers and under-represented groups.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <a class="left carousel-control" href="#frontCarousel" data-slide="prev">

@@ -19,17 +19,27 @@ nav > .container-fluid {
   max-width: 1024px;
 }
 
-/*#navbar-list > ul {
-  float: right;
-}*/
-
+/* Adminbar offset */
 .adminbar-offset {
   margin-top: 32px;
 }
 
-#header_logo {
-	height: 20px;
+.navbar-brand > img {
+  height: 20px;
 }
+
+/*
+Change height of navbar
+
+.navbar-brand > img {
+  height:80px;
+  vertical-align: middle;
+}
+
+.navbar-brand,
+.navbar-nav > li > a {
+    line-height: 100px;
+}*/
 
 /* footer */
 .footer-area-1 {
@@ -58,15 +68,15 @@ nav > .container-fluid {
 }
 
 #frontCarousel img {
-  /*min-width: 100%;*/
-  max-height: 100%;
+  min-width: 100%;
+  /*max-height: 100%;*/
 }
 
 /* Carousel Overlay */
-img {
+/*img {
 	display: block;
 	background: rgba(0,0,0,.6);
-} 
+} */
 
 /* Sidebar */
 #archives > ul {

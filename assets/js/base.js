@@ -10,4 +10,24 @@ jQuery(function($) {
 		}
 	})()
 
+
+	$(window).on("load resize", function () {
+		var windowHeight = $('#frontCarousel').height()
+
+		$('#frontCarousel > .carousel-inner > .item').each(function () {
+			var imageHeight = $(this).height()
+			var offsetDelta = (imageHeight-windowHeight) / 2
+
+			//console.log($(this).height())
+			//console.log($(this).children('img:first'))
+
+			console.log(offsetDelta)
+
+			if (offsetDelta > 0) {
+				$(this).css("margin-top", -offsetDelta)
+			}
+
+		})
+	})
+
 })
