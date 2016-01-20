@@ -1,5 +1,5 @@
 // Must pass in $ for function, to allow shorthand jquery calls
-jQuery(function($) {
+jQuery(document).ready(function($) {
 
 	(function() {
 		// if wpadminbar exists add an offset to page
@@ -11,23 +11,24 @@ jQuery(function($) {
 	})()
 
 
-	$(window).on("load resize", function () {
-		var windowHeight = $('#frontCarousel').height()
+	// $(window).on("load resize", function () {
+	// 	var windowHeight = $('#frontCarousel').height()
 
-		$('#frontCarousel > .carousel-inner > .item').each(function () {
-			var imageHeight = $(this).height()
-			var offsetDelta = (imageHeight-windowHeight) / 2
+	// 	$('#frontCarousel > .carousel-inner > .item').each(function () {
+	// 		var imageHeight = $(this).outerHeight()
+	// 		var offsetDelta = (imageHeight-windowHeight) / 2
 
-			//console.log($(this).height())
-			//console.log($(this).children('img:first'))
+	// 		console.log(imageHeight + '-' + windowHeight + '=' + (imageHeight-windowHeight) + '/2 = ' + offsetDelta)
 
-			console.log(offsetDelta)
+	// 		if (offsetDelta > 0) {
+	// 			$(this).css("margin-top", -offsetDelta)
+	// 		}
 
-			if (offsetDelta > 0) {
-				$(this).css("margin-top", -offsetDelta)
-			}
+	// 	})
+	// })
 
-		})
-	})
+	$('.carousel').carousel({
+    	interval: false
+	}); 
 
 })

@@ -8,6 +8,7 @@ Version: 1.0
 Tags: responsive, white, bootstrap
 */
 
+@import url('assets/css/normalize.css');
 @import url('bootstrap/css/bootstrap.css');
 @import url('assets/css/bootstrap-navbar-theme.css');
 
@@ -62,14 +63,26 @@ Change height of navbar
 }
 
 /* Front Page carousel */
+/*
+allows for adjustible height
+
 #frontCarousel {
-  max-height: 70%;
+  max-height: 500px;
   overflow: hidden;
+  clear: both;
 }
 
 #frontCarousel img {
   min-width: 100%;
-  /*max-height: 100%;*/
+}
+*/
+
+@media (min-width: 767px) {
+  #frontCarousel img {
+    width: auto;
+    height: 400px;
+    max-height: 400px;
+  }
 }
 
 /* Carousel Overlay */
@@ -77,6 +90,16 @@ Change height of navbar
 	display: block;
 	background: rgba(0,0,0,.6);
 } */
+
+/*.carousel > .carousel-inner > .item > .container > .carousel-caption {
+}*/
+
+.carousel .carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: left;
+  bottom: initial;
+}
 
 /* Sidebar */
 #archives > ul {

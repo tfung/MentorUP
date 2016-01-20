@@ -23,7 +23,16 @@
         </div>
       </div>
       <div class="item">
-        <img src="http://www.oregonscenics.com/s-n-p-ci-wide.jpg" alt="">
+        <img src="http://localhost:8888/wordpress/wp-content/uploads/2016/01/wide-e1453186175965.jpg" alt="">
+        <div class="container">
+          <div class="carousel-caption">
+              <h1></h1><br/>
+            <p class="lead">Our mission is to build a community of: professionals at all stages of their careers, potential employers, professional associations, volunteers and under-represented groups.</p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img src="http://localhost:8888/wordpress/wp-content/uploads/2016/01/wide-2-e1453186594242.jpg" alt="">
         <div class="container">
           <div class="carousel-caption">
               <h1></h1><br/>
