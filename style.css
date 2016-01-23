@@ -9,7 +9,7 @@ Tags: responsive, white, bootstrap
 */
 
 @import url('assets/css/normalize.css');
-@import url('bootstrap/css/bootstrap.css');
+@import url('assets/third-party/bootstrap-3.3.6/css/bootstrap.min.css');
 @import url('assets/css/bootstrap-navbar-theme.css');
 @import url('assets/third-party/font-awesome-4.5.0/css/font-awesome.min.css');
 
