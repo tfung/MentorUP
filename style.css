@@ -11,6 +11,7 @@ Tags: responsive, white, bootstrap
 @import url('assets/css/normalize.css');
 @import url('bootstrap/css/bootstrap.css');
 @import url('assets/css/bootstrap-navbar-theme.css');
+@import url('assets/third-party/font-awesome-4.5.0/css/font-awesome.min.css');
 
 html {
   height:100%;
@@ -57,23 +58,33 @@ Change height of navbar
 }*/
 
 /* footer */
-.footer-area-1 {
-	padding: 10px 10px;
-	background-color: #444242; 
-	padding-bottom: 40px; 
-	color: #CCCCCC;
-}
-.footer-area-1 p {
-	color: #8C8989;
+.footer-area {
+  color: #FFF;
+  padding: 30px 0;
+  text-align: center;
+  background-color: #1B1919; 
+  line-height: 20px;
 }
 
-.footer-area-2 {
-	padding: 10px 10px;
-	background-color: #1B1919; 
-	color: #CCCCCC;
+.footer-area a {
+  padding: 40px 20px;
 }
-.footer-area-2 p {
-	color: #8C8989;
+
+.footer-area a:link {
+  color: #FFF;
+  text-decoration: none;
+}
+.footer-area a:visited {
+  color: #FFF;
+  text-decoration: none;
+}
+.footer-area a:hover {
+  color: #BDBDBD;
+  text-decoration: none;
+}
+.footer-area a:active {
+  color: #FFF;
+  text-decoration: none;
 }
 
 /* Front Page carousel */

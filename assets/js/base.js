@@ -39,4 +39,18 @@ jQuery(document).ready(function($) {
 		console.log(windowHeight)
 		console.log('scrooltop: '+$(this).scrollTop())
 	})
+
+
+	$(window).scroll(function () {
+		console.log($(this).scrollTop())
+
+		if ($(this).scrollTop() > windowHeight - 68) {
+
+			console.log('in')
+			$('#navbar').addClass('navbar-fixed-top')
+		}
+		else if ($('#navbar').hasClass('navbar-fixed-top')) {
+			$('#navbar').removeClass('navbar-fixed-top')
+		}
+	})
 })

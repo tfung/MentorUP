@@ -65,4 +65,13 @@ get_header(); ?>
   </div>
 </div>
 
+<section id="upcoming" style="background: #FDF3E7;">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Upcoming Events in Edmonton:</h1>
+        <p></p>
+      </div>
+    </div>
+</section>
+
 <?php get_footer(); ?>
