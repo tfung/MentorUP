@@ -30,7 +30,7 @@ nav > .container-fluid {
   border-radius: 0;
   margin-bottom: 0;
   margin: 25px 0;
-  font-family: Lato, Arial;
+  /*font-family: Lato, Arial;*/
   font-size: medium;
 }
 
@@ -79,6 +79,10 @@ Change height of navbar
 /* Front Page carousel */
 #frontCarousel {
     background: #434F5B;
+}
+
+#about {
+  color: #FFFFFF;
 }
 /*
 allows for adjustible height

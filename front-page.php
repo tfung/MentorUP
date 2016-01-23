@@ -11,7 +11,7 @@ get_header(); ?>
 <!-- Input content -->
 <div id="frontCarousel" class="carousel slide">
   <div class="carousel-inner">
-    <div style="background-image: url(&quot;https://mentorupalberta.files.wordpress.com/2015/05/dsc_0098.jpg&quot;);
+    <div style="background-image: url(&quot;<?php echo $main_image_1; ?>&quot;);
                 height: calc(100vh - 150px);
                 background-size: cover;
                 opacity: 0.5;">
@@ -35,13 +35,19 @@ get_header(); ?>
 
 <?php include('navbar.php'); ?>
 
-<div class="container-full" style="padding: 50px 0; 
-                                    background-image: url(&quot;http://localhost:8888/wordpress/wp-content/uploads/2016/01/wide-2-e1453186594242.jpg&quot;);
-                                    height: calc(100vh - 400px);
-                                    background-size: cover;">
-  <div class="row">
-    <div class="col-md-4">
-      <p></p>
+<div id="about" class="container-full" style="background-color: #383838;">
+  <div style="padding: 50px 0; 
+              background-image: url(&quot;<?php echo $main_image_2; ?>&quot;);
+              height: calc(100vh - 400px);
+              background-size: cover;
+              background-position: bottom;
+              opacity: 0.5;">
+
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Who are we?</h2>
+        <p>TEST</p>
+      </div>
     </div>
   </div>
 </div>
