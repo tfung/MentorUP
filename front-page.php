@@ -35,18 +35,31 @@ get_header(); ?>
 
 <?php include('navbar.php'); ?>
 
-<div id="about" class="container-full" style="background-color: #383838;">
-  <div style="padding: 50px 0; 
+<div id="about" class="container-full">
+  <div style="padding: 50px 50px; 
+              text-align: justify-all;
+              background-color: #383838;
               background-image: url(&quot;<?php echo $main_image_2; ?>&quot;);
-              height: calc(100vh - 400px);
               background-size: cover;
               background-position: bottom;
-              opacity: 0.5;">
+              overflow: hidden;
+              letter-spacing: 2px;
+              line-height: 2;">
 
     <div class="row">
       <div class="col-md-12">
-        <h2>Who are we?</h2>
-        <p>TEST</p>
+        <h2 style="text-align: center;">About MentorUP</h2><br>
+        <p>
+        Our mission is to build a community of: professionals at all stages of their careers, 
+        potential employers, professional associations, volunteers and under-represented groups.
+        </p>
+        <br>
+        <p>
+        We provide networking, professional development, and informal mentoring opportunities to 
+        individuals including, but not limited to, Engineering, Technology and Science. Our members 
+        are people in the early stages of their career and students trying to find their niche, 
+        while marketing themselves to a potential employer.
+        </p>
       </div>
     </div>
   </div>
