@@ -12,12 +12,26 @@ Tags: responsive, white, bootstrap
 @import url('bootstrap/css/bootstrap.css');
 @import url('assets/css/bootstrap-navbar-theme.css');
 
+html {
+  height:100%;
+}
+
 body {
-  padding-top: 50px;
+  height: 100%;
+  /*padding-top: 50px;*/
 }
 
 nav > .container-fluid {
   max-width: 1024px;
+}
+
+.navbar {
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  margin: 25px 0;
+  font-family: Lato, Arial;
+  font-size: medium;
 }
 
 /* Adminbar offset */
@@ -63,6 +77,9 @@ Change height of navbar
 }
 
 /* Front Page carousel */
+#frontCarousel {
+    background: #434F5B;
+}
 /*
 allows for adjustible height
 
@@ -78,12 +95,27 @@ allows for adjustible height
 */
 
 @media (min-width: 767px) {
-  #frontCarousel img {
+/*  #frontCarousel img {
     width: auto;
     height: 400px;
     max-height: 400px;
-  }
+  }*/
+
 }
+
+/*#frontCarousel {
+  overflow: hidden;
+  height: 100vh;
+  min-height: 100vh;
+  background: #434F5B;
+}
+
+#frontCarousel img {
+  height: 100vh;
+  min-height: 100vh;
+  width: auto;
+  opacity: 0.5;
+}*/
 
 /* Carousel Overlay */
 /*img {
@@ -99,6 +131,7 @@ allows for adjustible height
   transform: translateY(-50%);
   text-align: left;
   bottom: initial;
+  margin-left: -10%;
 }
 
 /* Sidebar */

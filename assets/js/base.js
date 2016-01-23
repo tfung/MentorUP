@@ -1,14 +1,16 @@
 // Must pass in $ for function, to allow shorthand jquery calls
 jQuery(document).ready(function($) {
 
-	(function() {
-		// if wpadminbar exists add an offset to page
-		if (document.getElementById('wpadminbar')) {
-			if ($('nav').hasClass('navbar-fixed-top')) {
-				$('nav').addClass('adminbar-offset')
-			}
-		}
-	})()
+	var windowHeight = $(window).height()
+
+	// (function() {
+	// 	// if wpadminbar exists add an offset to page
+	// 	if (document.getElementById('wpadminbar')) {
+	// 		if ($('nav').hasClass('navbar-fixed-top')) {
+	// 			$('nav').addClass('adminbar-offset')
+	// 		}
+	// 	}
+	// })()
 
 
 	// $(window).on("load resize", function () {
@@ -31,4 +33,10 @@ jQuery(document).ready(function($) {
     	interval: false
 	}); 
 
+	$(window).on('resize', function () {
+		windowHeight = $(this).height()
+
+		console.log(windowHeight)
+		console.log('scrooltop: '+$(this).scrollTop())
+	})
 })
