@@ -74,7 +74,7 @@ get_header(); ?>
       <?php endwhile; ?>
       
       <br>
-      <h4 class="text-center"><a href="./category/events" style="text-align: center;">See More</a></h4>
+      <h4 class="text-center"><a class="post-link" href="./category/events">See More</a></h4>
       </div>
     </div>
 </section>

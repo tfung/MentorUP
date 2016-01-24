@@ -15,12 +15,9 @@ jQuery(document).ready(function($) {
 		windowHeight = $(this).height()
 	})
 	.scroll(function () {
-		console.log($(this).scrollTop())
-
 		if ($(this).scrollTop() > windowHeight - 68) {
-
-			console.log('in')
-			$('#navbar').addClass('navbar-fixed-top')
+			if (!$('#navbar').hasClass('navbar-fixed-top'))
+				$('#navbar').addClass('navbar-fixed-top')
 		}
 		else if ($('#navbar').hasClass('navbar-fixed-top')) {
 			$('#navbar').removeClass('navbar-fixed-top')

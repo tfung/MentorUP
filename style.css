@@ -16,6 +16,7 @@ Tags: responsive, white, bootstrap
 body {
   /* for static nav bar */
   /*padding-top: 50px;*/
+  background-color: #F9F9F9;
 }
 
 nav > .container-fluid {
