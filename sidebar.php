@@ -3,7 +3,7 @@
 		<?php get_search_form(); ?>
 	</aside>
 	<aside id="archives" class="widget widget_archive">
-		<h3 class="widget-title"><?php _e( 'Archives', '_tk' ); ?></h3>
+		<h3 class="widget-title"><?php _e( 'Past Events', '_tk' ); ?></h3>
 		<ul>
 			<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 		</ul>

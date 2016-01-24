@@ -3,29 +3,17 @@
 	<?php if ( have_posts() ) : ?>
 		<div class="row">
 		  	<div class="col-md-8">
-		  		<?php 
-	  				echo "<div class=\"post-item\">";
-	  				the_post(); 
-	  				the_content();
+		  	<?php while (have_posts()) : the_post(); ?>
 
-	  				echo "<span class=\"post-meta\">Posted on "; 
-	  				the_time('m/j/y g:i A');
-	  				echo "</span>";
+				<h3 class="post-header"><a class="post-link" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+				<br>
+				<p><?php the_content(); ?></p>
 
-	  				echo "</div>";
 
-		  			while ( have_posts() ) {
-		  				echo "<hr class=\"post-divider\" /><div class=\"post-item\">";
-		  				the_post(); 
-		  				the_content();
+				<span class="post-meta"><?php the_time('m/j/y g:i A'); ?></span>
 
-		  				echo "<span class=\"post-meta\">Posted on "; 
-	  					the_time('m/j/y g:i A');
-	  					echo "</span>";
-
-		  				echo "</div>";
-			  		}
-		  		?>
+				<hr class="post-divider" />
+			<?php endwhile; ?>
 		  	</div>
 			<div class="col-md-4">
 				<?php get_sidebar(); ?>

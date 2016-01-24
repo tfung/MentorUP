@@ -18,12 +18,22 @@ body {
   /*padding-top: 50px;*/
 }
 
+nav > .container-fluid {
+  max-width: 1024px;
+}
+
+section {
+  padding: 50px 50px;
+  overflow: hidden;
+}
+
 .row {
   margin-right: 0;
 }
 
-nav > .container-fluid {
-  max-width: 1024px;
+/* Adminbar offset */
+.adminbar-offset {
+  margin-top: 32px;
 }
 
 .navbar {
@@ -40,36 +50,9 @@ nav > .container-fluid {
   padding: 25px 0;
 }
 
-/* Adminbar offset */
-.adminbar-offset {
-  margin-top: 32px;
-}
-
 .navbar-brand > img {
   height: 20px;
 }
-
-section {
-  padding: 50px 50px;
-  overflow: hidden;
-}
-
-#upcoming a {
-  color: #1B1919;
-}
-
-/*
-Change height of navbar
-
-.navbar-brand > img {
-  height:80px;
-  vertical-align: middle;
-}
-
-.navbar-brand,
-.navbar-nav > li > a {
-    line-height: 100px;
-}*/
 
 /* footer */
 .footer-area {
@@ -106,10 +89,6 @@ Change height of navbar
     background: #434F5B;
 }
 
-#about {
-  color: #FFFFFF;
-}
-
 .carousel .carousel-caption {
   top: 50%;
   transform: translateY(-50%);
@@ -118,10 +97,16 @@ Change height of navbar
   margin-left: -10%;
 }
 
+/* about section */
+#about {
+  color: #FFFFFF;
+}
+
 /* Sidebar */
 #archives > ul {
 	list-style: none;
-	margin-left: 0;
+	margin: 0 0;
+  padding: 0 0;
 }
 #archives > .widget-title {
 	color: #444242;
@@ -142,6 +127,16 @@ Change height of navbar
 .post-meta {
 	color: #777;
 	text-decoration: underline;
+  text-align: right;
+}
+.post-header {
+  text-align: center;
+}
+.post-link {
+  color: #1B1919;
+}
+.post-link:hover {
+  color: #1B1919;
 }
 
 /* miscellaneous */

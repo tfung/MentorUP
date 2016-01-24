@@ -64,12 +64,12 @@ get_header(); ?>
 <section id="upcoming" style="background: #FDF3E7;">
     <div class="row">
       <div class="col-md-12">
-      <h2 class="text-center">Latest Events</h2>
+      <h2 class="post-header">Latest Events</h2>
       <?php query_posts('showposts=3');
 
       while (have_posts()) : the_post(); ?>
 
-        <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+        <h3><a class="post-link" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
         <p><?php the_excerpt(__('(more…)')); ?></p>
       <?php endwhile; ?>
       
