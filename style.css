@@ -13,13 +13,8 @@ Tags: responsive, white, bootstrap
 @import url('assets/css/bootstrap-navbar-theme.css');
 @import url('assets/third-party/font-awesome-4.5.0/css/font-awesome.min.css');
 
-html {
-  height:100%;
-}
-
-body {
-  height: 100%;
-  /*padding-top: 50px;*/
+.row {
+  margin-right: 0;
 }
 
 nav > .container-fluid {
@@ -31,7 +26,6 @@ nav > .container-fluid {
   border-radius: 0;
   margin-bottom: 0;
   margin: 25px 0;
-  /*font-family: Lato, Arial;*/
   font-size: medium;
 }
 
@@ -42,6 +36,15 @@ nav > .container-fluid {
 
 .navbar-brand > img {
   height: 20px;
+}
+
+section {
+  padding: 50px 50px;
+  overflow: hidden;
+}
+
+#upcoming a {
+  color: #1B1919;
 }
 
 /*
@@ -95,51 +98,6 @@ Change height of navbar
 #about {
   color: #FFFFFF;
 }
-/*
-allows for adjustible height
-
-#frontCarousel {
-  max-height: 500px;
-  overflow: hidden;
-  clear: both;
-}
-
-#frontCarousel img {
-  min-width: 100%;
-}
-*/
-
-@media (min-width: 767px) {
-/*  #frontCarousel img {
-    width: auto;
-    height: 400px;
-    max-height: 400px;
-  }*/
-
-}
-
-/*#frontCarousel {
-  overflow: hidden;
-  height: 100vh;
-  min-height: 100vh;
-  background: #434F5B;
-}
-
-#frontCarousel img {
-  height: 100vh;
-  min-height: 100vh;
-  width: auto;
-  opacity: 0.5;
-}*/
-
-/* Carousel Overlay */
-/*img {
-	display: block;
-	background: rgba(0,0,0,.6);
-} */
-
-/*.carousel > .carousel-inner > .item > .container > .carousel-caption {
-}*/
 
 .carousel .carousel-caption {
   top: 50%;

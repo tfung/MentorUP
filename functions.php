@@ -9,9 +9,9 @@ register_nav_menus( array(
 
 function enqueue_javascript()
 {
-	wp_register_script( 'bootstrap_js', get_template_directory_uri() . '/bootstrap/js/bootstrap.js', array( 'jquery' ), '3.3.6', true );
+	wp_register_script( 'bootstrap_js', get_template_directory_uri() . '/assets/third-party/bootstrap-3.3.6/js/bootstrap.js', array( 'jquery' ), '3.3.6', true );
 	wp_register_script( 'base_js', get_template_directory_uri() . '/assets/js/base.js', array( 'jquery' ), '1.0.0', true );
-	wp_register_script( 'parallax_js', get_template_directory_uri() . '/assets/third-party/parallax.js-1.3.1/parallax.min.js', '1.3.1', true );
+	wp_register_script( 'parallax_js', get_template_directory_uri() . '/assets/third-party/parallax.js-1.3.1/parallax.min.js', array( 'jquery' ), '1.3.1', true );
 
 	wp_enqueue_script( 'bootstrap_js' );
 	wp_enqueue_script( 'base_js' );

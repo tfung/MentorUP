@@ -9,7 +9,7 @@ $main_image_2 = get_theme_mod('main_image_2');
 get_header(); ?>
 
 <!-- Input content -->
-<div id="frontCarousel" class="carousel slide">
+<section id="frontCarousel" class="carousel slide" style="padding: 0 0;">
   <div class="carousel-inner">
     <div style="background-image: url(&quot;<?php echo $main_image_1; ?>&quot;);
                 height: calc(100vh - 150px);
@@ -23,26 +23,23 @@ get_header(); ?>
             echo "<img style=\"\" src=\"$site_logo\" >";
           }
           else {
-            echo "<h1 style=\"font-size: 100px;\">MentorUP</h1><br/>";
+            echo "<h1 style=\"font-size: 70px;\">MentorUP</h1><br/>";
           }
-
         ?>
         <h2>Premier Society of Leading Technical Professionals</h2>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <?php include('navbar.php'); ?>
 
-<div id="about" class="container-full">
-  <div style="padding: 50px 50px; 
-              text-align: justify-all;
+<section id="about" class="container-full" 
+        style="text-align: justify-all;
               background-color: #383838;
               background-image: url(&quot;<?php echo $main_image_2; ?>&quot;);
               background-size: cover;
               background-position: bottom;
-              overflow: hidden;
               letter-spacing: 2px;
               line-height: 2;">
 
@@ -62,14 +59,22 @@ get_header(); ?>
         </p>
       </div>
     </div>
-  </div>
-</div>
+</section>
 
 <section id="upcoming" style="background: #FDF3E7;">
     <div class="row">
       <div class="col-md-12">
-        <h1>Upcoming Events in Edmonton:</h1>
-        <p></p>
+      <h2>Latest Events</h2>
+      <?php query_posts('showposts=3');
+
+      while (have_posts()) : the_post(); ?>
+
+        <h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+        <p><?php the_excerpt(__('(more…)')); ?></p>
+      <?php endwhile; ?>
+      
+      <br>
+      <h4><a href="./category/events" style="text-align: center;">Show More</a></h4>
       </div>
     </div>
 </section>
