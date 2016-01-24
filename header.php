@@ -4,7 +4,18 @@
  * Data
  */
 
-  $logo_url = get_theme_mod('Main Image 1');
+  //$logo_url = get_theme_mod('Main Image 1');
+  $site_logo = get_theme_mod('site_logo');
+  $navbar_logo = get_theme_mod('navbar_logo');
+
+  $main_image_1 = get_theme_mod('main_image_1');
+  $main_image_2 = get_theme_mod('main_image_2');
+
+  if (is_front_page()) {
+    wp_register_script( 'frontpage_js', get_template_directory_uri() . '/assets/js/frontpage.js', array( 'jquery' ), '1.0', true );
+  }
+
+  wp_enqueue_script( 'frontpage_js' );
 ?>
 <!DOCTYPE html>
 <html>

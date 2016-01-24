@@ -13,6 +13,11 @@ Tags: responsive, white, bootstrap
 @import url('assets/css/bootstrap-navbar-theme.css');
 @import url('assets/third-party/font-awesome-4.5.0/css/font-awesome.min.css');
 
+body {
+  /* for static nav bar */
+  /*padding-top: 50px;*/
+}
+
 .row {
   margin-right: 0;
 }
@@ -22,11 +27,17 @@ nav > .container-fluid {
 }
 
 .navbar {
-  border: none;
-  border-radius: 0;
-  margin-bottom: 0;
-  margin: 25px 0;
+  margin: 0 0;
+  padding: 0 0;
   font-size: medium;
+}
+
+.navbar-fixed-top {
+  border-color: #000;
+}
+
+#navbar {
+  padding: 25px 0;
 }
 
 /* Adminbar offset */
@@ -131,4 +142,9 @@ Change height of navbar
 .post-meta {
 	color: #777;
 	text-decoration: underline;
+}
+
+/* miscellaneous */
+.text-center {
+  text-align: center;
 }

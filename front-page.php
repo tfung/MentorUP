@@ -64,7 +64,7 @@ get_header(); ?>
 <section id="upcoming" style="background: #FDF3E7;">
     <div class="row">
       <div class="col-md-12">
-      <h2>Latest Events</h2>
+      <h2 class="text-center">Latest Events</h2>
       <?php query_posts('showposts=3');
 
       while (have_posts()) : the_post(); ?>
@@ -74,7 +74,7 @@ get_header(); ?>
       <?php endwhile; ?>
       
       <br>
-      <h4><a href="./category/events" style="text-align: center;">Show More</a></h4>
+      <h4 class="text-center"><a href="./category/events" style="text-align: center;">See More</a></h4>
       </div>
     </div>
 </section>

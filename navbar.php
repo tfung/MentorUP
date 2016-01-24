@@ -1,3 +1,8 @@
+<?php
+  $site_logo = get_theme_mod('site_logo');
+  $navbar_logo = get_theme_mod('navbar_logo');
+?>
+
 <nav id="navbar" class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
