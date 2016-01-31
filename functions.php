@@ -1,6 +1,6 @@
 <?php 
 
-require_once('wp_bootstrap_navwalker.php');
+require_once('helper functions/wp_bootstrap_navwalker.php');
 require_once('helper functions/theme_customizer.php');
 
 register_nav_menus( array(

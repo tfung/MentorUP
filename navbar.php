@@ -15,7 +15,7 @@
       <a class="navbar-brand" href="<?php echo site_url(); ?>">
           <?php
             if (!empty($navbar_logo)) {
-              echo "<img style=\"margin-top: -18px;height: 50px;\" src=\"$navbar_logo\" >";
+              echo "<img id=\"navbar-logo\" src=\"$navbar_logo\" >";
             } 
             else {
               echo bloginfo('name');;

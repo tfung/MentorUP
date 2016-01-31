@@ -20,7 +20,7 @@ get_header(); ?>
       <div class="carousel-caption">
         <?php 
           if (!empty($site_logo)) {
-            echo "<img style=\"\" src=\"$site_logo\" >";
+            echo "<img style=\"\" src=\"$site_logo\" alt=\"MentorUP\">";
           }
           else {
             echo "<h1 style=\"font-size: 70px;\">MentorUP</h1><br/>";
