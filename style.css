@@ -109,6 +109,17 @@ section {
   color: #FFFFFF;
 }
 
+/* sponsors logos */
+#sponsors {
+  background-color: #FFF;
+}
+
+.sponsor-logos {
+  height: 100px;
+  margin: auto auto;
+  display: block;
+}
+
 /* Sidebar */
 #archives > ul {
 	list-style: none;

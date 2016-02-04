@@ -70,7 +70,24 @@ function image_customizer($wp_customize) {
 		)));
 }
 
+function sponsor_urls_customizer($wp_customize) {
+	$wp_customize->add_section( 'sponsor_logos_section', array(
+		'title' => 'Sponsor Logos',
+	));
+
+	$wp_customize->add_setting( 'sponsor_logo_list', array(
+		'default' => '',
+	));
+
+	$wp_customize->add_control( 'text_setting', array(
+		'label' => 'Comma Delimited URLs',
+		'section' => 'sponsor_logos_section',
+		'settings' => 'sponsor_logo_list',
+		'type' => 'text',
+	));
+}
+
 add_action( 'customize_register', 'logo_customizer' );
 add_action( 'customize_register', 'image_customizer' );
-
+add_action( 'customize_register', 'sponsor_urls_customizer' );
 ?>

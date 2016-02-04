@@ -6,6 +6,8 @@ $navbar_logo = get_theme_mod('navbar_logo');
 $main_image_1 = get_theme_mod('main_image_1');
 $main_image_2 = get_theme_mod('main_image_2');
 
+$sponsor_urls = get_theme_mod('sponsor_logo_list');
+
 get_header(); ?>
 
 <!-- Input content -->
@@ -60,6 +62,24 @@ get_header(); ?>
       </div>
     </div>
 </section>
+
+<section id="sponsors" class="container-full">
+  <div class="row">
+  <div class="col-md-12">
+    <h2 style="text-align: center;">Sponsors</h2><br>
+    <?php
+      $sponsor_url_array = explode(',', $sponsor_urls);
+
+      foreach ($sponsor_url_array as $sponsor_url) {
+        ?>
+          <div class="col-md-4">
+            <img class="sponsor-logos" src="<?php echo $sponsor_url; ?>">
+          </div>
+        <?php } ?>
+  </div>
+  </div>
+</section>
+
 
 <section id="upcoming" style="background: #FDF3E7;">
     <div class="row">
