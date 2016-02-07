@@ -66,7 +66,7 @@ get_header(); ?>
 <section id="sponsors" class="container-full">
   <div class="row">
   <div class="col-md-12">
-    <h2 style="text-align: center;">Sponsors</h2><br>
+    <h2 style="text-align: center;">Our Sponsors</h2><br>
     <?php
       $sponsor_url_array = explode(',', $sponsor_urls);
 
@@ -83,18 +83,31 @@ get_header(); ?>
 
 <section id="upcoming" style="background: #FDF3E7;">
     <div class="row">
-      <div class="col-md-12">
-      <h2 class="post-header">Latest Events</h2>
-      <?php query_posts('showposts=3');
+      <div class="col-md-6">
+        <h2 class="post-header">Edmonton Events</h2>
+        <?php query_posts('showposts=3&category_name=Edmonton Events');
 
-      while (have_posts()) : the_post(); ?>
+        while (have_posts()) : the_post(); ?>
 
-        <h3><a class="post-link" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-        <p><?php the_excerpt(__('(more…)')); ?></p>
-      <?php endwhile; ?>
-      
-      <br>
-      <h4 class="text-center"><a class="post-link" href="./category/events">See More</a></h4>
+          <h3><a class="post-link" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+          <p><?php the_excerpt(__('(more…)')); ?></p>
+        <?php endwhile; ?>
+        
+        <br>
+        <h4 class="text-center"><a class="post-link" href="./category/events/edmonton-events">See More</a></h4>
+      </div>
+      <div class="col-md-6">
+        <h2 class="post-header">Calgary Events</h2>
+        <?php query_posts('showposts=3&category_name=Calgary Events');
+
+        while (have_posts()) : the_post(); ?>
+
+          <h3><a class="post-link" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+          <p><?php the_excerpt(__('(more…)')); ?></p>
+        <?php endwhile; ?>
+        
+        <br>
+        <h4 class="text-center"><a class="post-link" href="./category/events/calgary-events">See More</a></h4>
       </div>
     </div>
 </section>
