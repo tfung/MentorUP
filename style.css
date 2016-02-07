@@ -159,6 +159,12 @@ section {
 .post-link:hover {
   color: #1B1919;
 }
+.post img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
 
 /* miscellaneous */
 .text-center {
