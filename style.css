@@ -159,12 +159,19 @@ section {
 .post-link:hover {
   color: #1B1919;
 }
+
+/* override width set with inline styles */
 .post img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
 }
 
+.post > * {
+  width: auto !important;
+  height: atuo !important;
+  max-width: 100% !important;
+}
 
 /* miscellaneous */
 .text-center {

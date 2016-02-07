@@ -22,7 +22,7 @@
   <head>
     <meta charset="utf-8">
     <title>MentorUP Alberta</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
