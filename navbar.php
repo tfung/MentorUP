@@ -14,7 +14,7 @@
       </button>
       <a class="navbar-brand" href="<?php echo site_url(); ?>">
         <?php if (!empty($navbar_logo)) : ?>
-          <img id="navbar-logo" src="<?php echo $navbar_logo; ?>">;
+          <img id="navbar-logo" src="<?php echo $navbar_logo; ?>">
         <?php 
           else: 
             echo bloginfo('name');
