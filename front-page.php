@@ -6,7 +6,11 @@ $navbar_logo = get_theme_mod('navbar_logo');
 $main_image_1 = get_theme_mod('main_image_1');
 $main_image_2 = get_theme_mod('main_image_2');
 
-$sponsor_urls = get_theme_mod('sponsor_logo_list');
+$about_title = get_theme_mod('about_title');
+$about_content = get_theme_mod('about_content');
+
+$sponsors_title = get_theme_mod('sponsors_title');
+$sponsors_content = get_theme_mod('sponsors_content');
 
 get_header(); 
 
@@ -34,6 +38,7 @@ get_header();
 
 <?php include('navbar.php'); ?>
 
+<?php if (!empty($about_title) || !empty($about_content)) : ?>
 <section id="about" class="container-full" 
   style="text-align: justify-all;
   background-color: #383838;
@@ -45,28 +50,31 @@ get_header();
 
   <div class="row">
     <div class="col-md-12">
-      <h2 style="text-align: center;">About MentorUP</h2><br>
-      <p>
-        Our mission is to build a community of: professionals at all stages of their careers, 
-        potential employers, professional associations, volunteers and under-represented groups.
-      </p>
-      <br>
-      <p>
-        We provide networking, professional development, and informal mentoring opportunities to 
-        individuals including, but not limited to, Engineering, Technology and Science. Our members 
-        are people in the early stages of their career and students trying to find their niche, 
-        while marketing themselves to a potential employer.
-      </p>
+
+      <?php if (!empty($about_title)) : ?>
+        <h2 style="text-align: center;"><?php echo $about_title; ?></h2><br>
+      <?php endif; ?>
+      <?php 
+      $about_paragraphs = explode("\n", $about_content);
+
+      foreach ($about_paragraphs as $paragraph) : 
+      ?>
+        <p><?php echo $paragraph; ?></p>
+      <?php endforeach; ?>
+
     </div>
   </div>
 </section>
+<?php endif; ?>
 
 
-<?php if (!empty($sponsor_urls)) : ?>
+<?php if (!empty($sponsors_title) || !empty($sponsors_content)) : ?>
   <section id="sponsors" class="container-full">
-    <h2 style="text-align: center;">Our Sponsors</h2><br>
+    <?php if (!empty($sponsors_title)) : ?>
+      <h2 style="text-align: center;"><?php echo $sponsors_title; ?></h2><br>
+    <?php endif; ?>
     <?php
-    $sponsor_url_array = explode(',', $sponsor_urls);
+    $sponsor_url_array = explode(',', $sponsors_content);
 
     while(!empty($sponsor_url_array)) : ?>
     <div class="row">

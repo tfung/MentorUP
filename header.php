@@ -11,6 +11,12 @@ $navbar_logo = get_theme_mod('navbar_logo');
 $main_image_1 = get_theme_mod('main_image_1');
 $main_image_2 = get_theme_mod('main_image_2');
 
+$email_address = get_theme_mod('email_address');
+$facebook_url = get_theme_mod('facebook_url');
+$twitter_url = get_theme_mod('twitter_url');
+$linkedin_url = get_theme_mod('linkedin_url');
+
+
 if (is_front_page()) {
   wp_register_script( 'frontpage_js', get_template_directory_uri() . '/assets/js/frontpage.js', array( 'jquery' ), '1.0', true );
 }
