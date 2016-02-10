@@ -36,7 +36,7 @@ get_header();
   </div>
 </section>
 
-<?php include('navbar.php'); ?>
+<?php get_template_part('templates/navbar'); ?>
 
 <?php if (!empty($about_title) || !empty($about_content)) : ?>
 <section id="about" class="container-full" 

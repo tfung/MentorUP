@@ -29,10 +29,10 @@ $linkedin_url = get_theme_mod('linkedin_url');
         <?php endif; ?>
 
         <?php if (!empty($email_address)) : ?>
-          <a class="fa fa-envelope-o fa-3x" href="#"></a>
+          <a class="fa fa-envelope-o fa-3x" href="mailto:<?php echo $email_address; ?>"></a>
         <?php endif; ?>
 
-        <p>© 2016 MentorUP Alberta | All Rights Reserved</p>
+        <p>© <?php echo date("Y"); ?> MentorUP Alberta | All Rights Reserved</p>
       </div>
     </div>
   </div>
