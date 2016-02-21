@@ -167,7 +167,7 @@ function content_customizer($wp_customize) {
 		'label' => 'Sponsors Image URLs',
 		'section' => 'content_section',
 		'settings' => 'sponsors_content',
-		'type' => 'textarea',
+		'type' => 'text',
 		'description' => 'Comma Separated URLs',
 	));
 
