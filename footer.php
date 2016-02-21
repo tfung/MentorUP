@@ -1,6 +1,4 @@
 
-</div> <!-- /container -->
-
 <?php
 
 $email_address = get_theme_mod('email_address');
@@ -40,5 +38,6 @@ $linkedin_url = get_theme_mod('linkedin_url');
 
 <?php wp_footer(); ?>
 
+</div> <!-- /container -->
 </body>
 </html>

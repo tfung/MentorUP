@@ -128,6 +128,4 @@ get_header();
 </div>
 </section>
 
-<div class="loader"></div>
-
 <?php get_footer(); ?>

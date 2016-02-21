@@ -1,10 +1,5 @@
 <?php
 
-/*
- * Data
- */
-
-  //$logo_url = get_theme_mod('Main Image 1');
 $site_logo = get_theme_mod('site_logo');
 $navbar_logo = get_theme_mod('navbar_logo');
 
@@ -38,8 +33,4 @@ wp_enqueue_script( 'frontpage_js' );
 
       <?php if (!is_front_page()) { get_template_part('templates/navbar'); } ?>
 
-      <?php if (is_front_page()) : ?>
-        <div class="container-full">
-      <?php else: ?>
-        <div class="container">
-      <?php endif; ?> 
+    <div class="container-full">

@@ -170,6 +170,12 @@ section {
   color: #1B1919;
 }
 
+.post-image {
+  display: block;
+  margin: 30px auto;
+  max-width: 100% !important;
+}
+
 /* override width set with inline styles */
 .post img {
   width: auto !important;
