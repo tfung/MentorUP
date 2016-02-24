@@ -119,19 +119,52 @@ section {
   color: #FFFFFF;
 }
 
-/* sponsors logos */
+/* sponsors/partners */
+.img-container {
+  text-align: center;
+
+}
+.img-container:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;  /* vertical alignment of the inline element */
+  height: 100%;
+}
+.img-item {
+  display: inline-block; 
+  vertical-align: middle; 
+  padding: 15px 15px;
+}
+
 #sponsors {
+  background-color: #E4F4FF;
+}
+
+#partners {
   background-color: #FFF;
 }
 
-.sponsor-logos {
+/*
+old approach
+.sponsor-logo {
   max-height: 100px;
   max-width: 100%;
   margin: 30px auto;
   display: block;
   width: auto;
   height: auto;
+}*/
+
+.sponsor-container {
+  width: 250px;
+  height: 120px;
+  margin: 10px auto;
+  background-color: #FFF;
 }
+.sponsor-item {
+  max-width: 240px;
+}
+
 
 /* Sidebar */
 #archives > ul {

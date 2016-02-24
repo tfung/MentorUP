@@ -138,7 +138,15 @@ function content_customizer($wp_customize) {
 	));
 
 	$wp_customize->add_setting( 'sponsors_content', array(
-		'default' => '',
+		'default' => null,
+	));
+
+	$wp_customize->add_setting( 'partners_title', array(
+		'default' => null,
+	));
+
+	$wp_customize->add_setting( 'partners_content', array(
+		'default' => null,
 	));
 
 	$wp_customize->add_control( 'about_title_control', array(
@@ -167,6 +175,21 @@ function content_customizer($wp_customize) {
 		'label' => 'Sponsors Image URLs',
 		'section' => 'content_section',
 		'settings' => 'sponsors_content',
+		'type' => 'text',
+		'description' => 'Comma Separated URLs',
+	));
+
+	$wp_customize->add_control( 'partners_title_control', array(
+		'label' => 'Partners Header',
+		'section' => 'content_section',
+		'settings' => 'partners_title',
+		'type' => 'text',
+	));
+
+	$wp_customize->add_control( 'partners_content_control', array(
+		'label' => 'Partners Image URLs',
+		'section' => 'content_section',
+		'settings' => 'partners_content',
 		'type' => 'text',
 		'description' => 'Comma Separated URLs',
 	));

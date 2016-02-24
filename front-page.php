@@ -12,6 +12,9 @@ $about_content = get_theme_mod('about_content');
 $sponsors_title = get_theme_mod('sponsors_title');
 $sponsors_content = get_theme_mod('sponsors_content');
 
+$partners_title = get_theme_mod('partners_title');
+$partners_content = get_theme_mod('partners_content');
+
 get_header(); 
 
 ?>
@@ -85,7 +88,9 @@ get_header();
           $sponsor_url = array_shift($sponsor_url_array) ?>
 
         <div class="col-md-4">
-          <img class="sponsor-logos" src="<?php echo $sponsor_url; ?>">
+          <div class="img-container sponsor-container">
+            <img class="img-item sponsor-item" src="<?php echo $sponsor_url; ?>">
+          </div>
         </div>
       <?php endfor; ?>
 
@@ -96,6 +101,36 @@ get_header();
 </section>
 <?php endif; ?>
 
+
+<?php if (!empty($partners_title) || !empty($partners_content)) : ?>
+  <section id="partners" class="container-full">
+    <?php if (!empty($partners_title)) : ?>
+      <h2 style="text-align: center;"><?php echo $partners_title; ?></h2><br>
+    <?php endif; ?>
+    <?php
+    $partner_url_array = explode(',', $partners_content);
+
+    while(!empty($partner_url_array)) : ?>
+    <div class="row">
+      <div class="col-md-12">
+
+        <?php 
+        for ($i = 0; $i < 3 && !empty($partner_url_array); $i++) : 
+          $partner_url = array_shift($partner_url_array) ?>
+
+        <div class="col-md-4">
+          <div class="img-container sponsor-container">
+            <img class="img-item sponsor-item" src="<?php echo $partner_url; ?>">
+          </div>
+        </div>
+      <?php endfor; ?>
+
+    </div>
+  </div>
+
+  <?php endwhile; ?>
+</section>
+<?php endif; ?>
 
 <section id="upcoming" style="background: #FDF3E7;">
   <div class="row">
