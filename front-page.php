@@ -11,9 +11,19 @@ $about_content = get_theme_mod('about_content');
 
 $sponsors_title = get_theme_mod('sponsors_title');
 $sponsors_content = get_theme_mod('sponsors_content');
+$sponsors_title_color = get_theme_mod('sponsors_title_color');
+$sponsors_background_color = get_theme_mod('sponsors_background_color');
 
 $partners_title = get_theme_mod('partners_title');
 $partners_content = get_theme_mod('partners_content');
+$partners_title_color = get_theme_mod('partners_title_color');
+$partners_background_color = get_theme_mod('partners_background_color');
+
+// format colors into css format
+$sponsors_title_color = (!empty($sponsors_title_color) ? "color: $sponsors_title_color;" : "");
+$partners_title_color = (!empty($partners_title_color) ? "color: $partners_title_color;" : "");
+$sponsors_background_color = (!empty($sponsors_background_color) ? "background-color: $sponsors_background_color;" : "");
+$partners_background_color = (!empty($partners_background_color) ? "background-color: $partners_background_color;" : "");
 
 get_header(); 
 
@@ -72,9 +82,9 @@ get_header();
 
 
 <?php if (!empty($sponsors_title) || !empty($sponsors_content)) : ?>
-  <section id="sponsors" class="container-full">
+  <section id="sponsors" class="container-full" style="<?php echo $sponsors_background_color; ?>">
     <?php if (!empty($sponsors_title)) : ?>
-      <h2 style="text-align: center;"><?php echo $sponsors_title; ?></h2><br>
+      <h2 style="text-align: center; <?php echo $sponsors_title_color; ?>"><?php echo $sponsors_title; ?></h2><br>
     <?php endif; ?>
     <?php
     $sponsor_url_array = explode(',', $sponsors_content);
@@ -101,9 +111,9 @@ get_header();
 
 
 <?php if (!empty($partners_title) || !empty($partners_content)) : ?>
-  <section id="partners" class="container-full">
+  <section id="partners" class="container-full" style="<?php echo $partners_background_color; ?>">
     <?php if (!empty($partners_title)) : ?>
-      <h2 style="text-align: center;"><?php echo $partners_title; ?></h2><br>
+      <h2 style="text-align: center; <?php echo $partners_title_color; ?>"><?php echo $partners_title; ?></h2><br>
     <?php endif; ?>
     <?php
     $partner_url_array = explode(',', $partners_content);

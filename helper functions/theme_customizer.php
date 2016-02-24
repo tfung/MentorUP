@@ -141,12 +141,28 @@ function content_customizer($wp_customize) {
 		'default' => null,
 	));
 
+	$wp_customize->add_setting( 'sponsors_title_color', array(
+		'default' => '',
+	));
+
+	$wp_customize->add_setting( 'sponsors_background_color', array(
+		'default' => '',
+	));
+
 	$wp_customize->add_setting( 'partners_title', array(
 		'default' => null,
 	));
 
 	$wp_customize->add_setting( 'partners_content', array(
 		'default' => null,
+	));
+
+	$wp_customize->add_setting( 'partners_title_color', array(
+		'default' => '',
+	));
+
+	$wp_customize->add_setting( 'partners_background_color', array(
+		'default' => '',
 	));
 
 	$wp_customize->add_control( 'about_title_control', array(
@@ -179,6 +195,30 @@ function content_customizer($wp_customize) {
 		'description' => 'Comma Separated URLs',
 	));
 
+	$wp_customize->add_control( 
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'sponsors_title_color',
+			array(
+				'label' => 'Sponsors Title Color',
+				'section' => 'content_section',
+				'settings' => 'sponsors_title_color'
+			)
+		)
+	);
+
+	$wp_customize->add_control( 
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'sponsors_background_color',
+			array(
+				'label' => 'Sponsors Background Color',
+				'section' => 'content_section',
+				'settings' => 'sponsors_background_color'
+			)
+		)
+	);
+
 	$wp_customize->add_control( 'partners_title_control', array(
 		'label' => 'Partners Header',
 		'section' => 'content_section',
@@ -193,6 +233,30 @@ function content_customizer($wp_customize) {
 		'type' => 'text',
 		'description' => 'Comma Separated URLs',
 	));
+
+	$wp_customize->add_control( 
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'partners_title_color',
+			array(
+				'label' => 'Partners Title Color',
+				'section' => 'content_section',
+				'settings' => 'partners_title_color'
+			)
+		)
+	);
+
+	$wp_customize->add_control( 
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'partners_background_color',
+			array(
+				'label' => 'Partners Background Color',
+				'section' => 'content_section',
+				'settings' => 'partners_background_color'
+			)
+		)
+	);
 
 }
 
