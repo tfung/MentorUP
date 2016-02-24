@@ -81,7 +81,6 @@ get_header();
 
     while(!empty($sponsor_url_array)) : ?>
     <div class="row">
-      <div class="col-md-12">
 
         <?php 
         for ($i = 0; $i < 3 && !empty($sponsor_url_array); $i++) : 
@@ -94,7 +93,6 @@ get_header();
         </div>
       <?php endfor; ?>
 
-    </div>
   </div>
 
   <?php endwhile; ?>
@@ -112,7 +110,6 @@ get_header();
 
     while(!empty($partner_url_array)) : ?>
     <div class="row">
-      <div class="col-md-12">
 
         <?php 
         for ($i = 0; $i < 3 && !empty($partner_url_array); $i++) : 
@@ -125,7 +122,6 @@ get_header();
         </div>
       <?php endfor; ?>
 
-    </div>
   </div>
 
   <?php endwhile; ?>
