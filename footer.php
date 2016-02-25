@@ -8,6 +8,8 @@ $linkedin_url = get_theme_mod('linkedin_url');
 
 ?>
 
+<div id="footer-padding"></div>
+
 <footer>
   <div class="container-full footer-area">
     <div class="row">

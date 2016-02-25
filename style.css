@@ -13,6 +13,10 @@ Tags: responsive, white, bootstrap
 @import url('assets/css/bootstrap-navbar-theme.css');
 @import url('assets/third-party/font-awesome-4.5.0/css/font-awesome.min.css');
 
+html {
+  height: 100%;
+}
+
 body {
   /* for static nav bar */
   /*padding-top: 50px;*/
