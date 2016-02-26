@@ -186,8 +186,10 @@ old approach
   padding: 25px 0 25px 0;
 }
 .post-divider {
-  background-color: #000;
+  background-color: #E2E2E2;
   height: 1px;
+  /*margin: 0 25px;*/
+  width: 60%;
 }
 .post-meta {
   color: #777;
@@ -210,17 +212,17 @@ old approach
   max-width: 100% !important;
 }
 
-/* override width set with inline styles */
-.post img {
-  width: auto !important;
-  height: auto !important;
-  max-width: 100% !important;
+.post {
+  margin: 40px 10px;
 }
 
-.post > * {
-  width: auto !important;
-  height: atuo !important;
-  max-width: 100% !important;
+/* override/resize width of posts for mobile devices */
+@media (max-width: 768px) {
+  .post * {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+  }
 }
 
 /* miscellaneous */
