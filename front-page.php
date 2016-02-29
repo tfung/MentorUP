@@ -38,12 +38,14 @@ get_header();
     </div>
     <div class="container">
       <div class="carousel-caption">
+        <div id="test">
         <?php if (!empty($site_logo)) : ?>
           <img src="<?php echo $site_logo; ?>" alt="MentorUP">
         <?php else: ?>
           <h1 style="font-size: 70px;">MentorUP</h1><br/>
         <?php endif; ?>
         <h2>Premier Society of Leading Technical Professionals</h2>
+        </div>
       </div>
     </div>
   </div>
@@ -145,28 +147,27 @@ get_header();
       <?php query_posts('showposts=3&category_name=Edmonton Events');
 
       while (have_posts()) : the_post(); ?>
+        <h3><a class="post-link" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+        <p><?php the_excerpt(__('(more…)')); ?></p>
+      <?php endwhile; ?>
 
-      <h3><a class="post-link" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-      <p><?php the_excerpt(__('(more…)')); ?></p>
-    <?php endwhile; ?>
+      <br>
+      <h4 class="text-center"><a class="post-link" href="./category/events/edmonton-events">See More</a></h4>
+    </div>
+    <div class="col-md-6">
+      <h2 class="post-header">Calgary Events</h2>
+      <?php query_posts('showposts=3&category_name=Calgary Events');
+
+      while (have_posts()) : the_post(); ?>
+
+        <h3><a class="post-link" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+        <p><?php the_excerpt(__('(more…)')); ?></p>
+      <?php endwhile; ?>
 
     <br>
-    <h4 class="text-center"><a class="post-link" href="./category/events/edmonton-events">See More</a></h4>
+    <h4 class="text-center"><a class="post-link" href="./category/events/calgary-events">See More</a></h4>
+    </div>
   </div>
-  <div class="col-md-6">
-    <h2 class="post-header">Calgary Events</h2>
-    <?php query_posts('showposts=3&category_name=Calgary Events');
-
-    while (have_posts()) : the_post(); ?>
-
-      <h3><a class="post-link" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-      <p><?php the_excerpt(__('(more…)')); ?></p>
-    <?php endwhile; ?>
-
-  <br>
-  <h4 class="text-center"><a class="post-link" href="./category/events/calgary-events">See More</a></h4>
-</div>
-</div>
 </section>
 
 <?php get_footer(); ?>

@@ -1,1 +1,0 @@
-<p><?php _e('Sorry, this page does not exist.'); ?></p>

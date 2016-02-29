@@ -27,6 +27,14 @@ nav > .container-fluid {
   max-width: 1024px;
 }
 
+nav.navbar{
+   -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+}
+nav.navbar.shrink {
+  min-height: 35px;
+}
+
 section {
   padding: 50px 50px;
   overflow: hidden;
@@ -41,19 +49,20 @@ section {
   margin-top: 32px;
 }
 
-.navbar {
+nav.navbar {
   margin: 0 0;
   padding: 0 0;
   font-size: medium;
 }
 
-.navbar-fixed-top {
+nav.navbar-fixed-top {
   border-color: #000;
 }
 
-.navbar-brand > img {
+nav.navbar-brand > img {
   height: 20px;
 }
+
 /* #434f5b */
 /*.navbar-default .navbar-nav > li > a:hover {
   color: #798589;
@@ -61,9 +70,8 @@ section {
 
 @media (min-width: 768px) {
   /* settings for tablets and up */
-  .navbar {
+  nav.navbar {
     margin: 0 0;
-    padding: 0 0;
     font-size: medium;
     padding: 25px 0;
   }
@@ -210,10 +218,6 @@ old approach
   display: block;
   margin: 30px auto;
   max-width: 100% !important;
-}
-
-.post {
-  margin: 40px 10px;
 }
 
 /* override/resize width of posts for mobile devices */

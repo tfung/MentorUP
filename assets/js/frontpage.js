@@ -2,10 +2,6 @@
 
   var windowHeight = $(window).height()
 
-  $('.carousel').carousel({
-    interval: false
-  }); 
-
   $(window).on('load', function () {
     if ($('#navbar').hasClass('navbar-fixed-top')) {
       $('#navbar').removeClass('navbar-fixed-top')
@@ -23,5 +19,13 @@
       $('#navbar').removeClass('navbar-fixed-top')
     }
   })
+
+  $(window).scroll(function () {
+    var tmp = $('#test').position().top;
+
+    if (tmp < window.innerHeight * 0.5) {
+      $('#test').css('opacity', tmp / window.innerHeight);
+    }
+  });
 
 })(jQuery);
