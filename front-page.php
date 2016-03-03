@@ -38,14 +38,12 @@ get_header();
     </div>
     <div class="container">
       <div class="carousel-caption">
-        <div id="test">
         <?php if (!empty($site_logo)) : ?>
           <img src="<?php echo $site_logo; ?>" alt="MentorUP">
         <?php else: ?>
           <h1 style="font-size: 70px;">MentorUP</h1><br/>
         <?php endif; ?>
         <h2>Premier Society of Leading Technical Professionals</h2>
-        </div>
       </div>
     </div>
   </div>

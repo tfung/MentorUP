@@ -20,12 +20,4 @@
     }
   })
 
-  $(window).scroll(function () {
-    var tmp = $('#test').position().top;
-
-    if (tmp < window.innerHeight * 0.5) {
-      $('#test').css('opacity', tmp / window.innerHeight);
-    }
-  });
-
 })(jQuery);

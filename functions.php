@@ -1,8 +1,12 @@
 <?php 
 
+// plugins
+require_once( __DIR__ . '/plugins/cmb2/init.php');
+
+// helper functions
 require_once( __DIR__ . '/helper functions/wp_bootstrap_navwalker.php');
 require_once( __DIR__ . '/helper functions/theme_customizer.php');
-require_once( __DIR__ . '/plugins/cmb2/init.php');
+require_once( __DIR__ . '/helper functions/cmb_customizations.php');
 
 register_nav_menus( array(
   'primary' => __( 'Primary Menu', 'wpbootstrap' ),
