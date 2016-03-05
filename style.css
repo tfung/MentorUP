@@ -12,26 +12,34 @@ Tags: responsive, white, bootstrap
 @import url('assets/third-party/bootstrap-3.3.6/css/bootstrap.min.css');
 @import url('assets/css/bootstrap-navbar-theme.css');
 @import url('assets/third-party/font-awesome-4.5.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700');
 
 html {
   height: 100%;
 }
 
 body {
-  /* for static nav bar */
-  /*padding-top: 50px;*/
   background-color: #F9F9F9;
+  font-family: 'Open Sans', sans-serif;
 }
+
+/* override default bootstrap */
+h1 { font-size: 26px; }
+h2 { font-size: 20px; }
+h3 { font-size: 16px; }
+h4 { font-size: 14px; }
+h5 { font-size: 13px; }
+h6 { font-size: 12px; }
 
 nav > .container-fluid {
   max-width: 1024px;
 }
 
-nav.navbar{
+nav .navbar{
    -webkit-transition: all 0.4s ease;
    transition: all 0.4s ease;
 }
-nav.navbar.shrink {
+nav .navbar.shrink {
   min-height: 35px;
 }
 
@@ -49,7 +57,7 @@ section {
   margin-top: 32px;
 }
 
-nav.navbar {
+nav .navbar {
   margin: 0 0;
   padding: 0 0;
   font-size: medium;
@@ -188,6 +196,32 @@ old approach
   color: #1B1919;
 }
 
+/* new code */
+.post-content {
+  margin-top: 20px;
+}
+
+/* new code */
+.post-left-col > :first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.post-right-col > :first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.post-right-col > img {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 30px auto;
+  max-width: 100% !important;
+  max-height: 250px !important;
+}
+
+/* legacy code */
 /* Post Item */
 .post-item {
   margin: 25px 0 25px 0;

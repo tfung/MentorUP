@@ -29,7 +29,7 @@ the_post();
       <div class="col-md-offset-2 col-md-8">
         <h2 class="post-header"><a class="post-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         <?php if ($event_date && $event_time): ?>
-            <h3 class="post-header"><?php echo $event_date; ?> | <?php echo $event_time; ?></h3>
+            <h4 class="post-header"><?php echo $event_date; ?> | <?php echo $event_time; ?></h4>
         <?php elseif ($event_date): ?>
             <h3 class="post-header"><?php echo $event_date; ?></h3>
         <?php elseif ($event_time): ?>
@@ -37,7 +37,7 @@ the_post();
         <?php endif; ?>
 
         <?php if ($event_location): ?>
-            <h3 class="post-header"><?php echo $event_location; ?></h3>
+            <h4 class="post-header"><?php echo $event_location; ?></h4>
         <?php endif; ?>
 
         <?php if ($event_image) :?>

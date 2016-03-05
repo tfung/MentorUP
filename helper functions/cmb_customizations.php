@@ -51,6 +51,12 @@ function post_metabox() {
     ));
 
     $cmb->add_field( array(
+        'id' => 'event_ticket_cost',
+        'name' => 'Ticket Cost',
+        'type' => 'textarea'
+    ));
+
+    $cmb->add_field( array(
         'id'      => 'event_image',
         'name'    => 'Image',
         'type'    => 'file',
