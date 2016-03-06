@@ -57,17 +57,17 @@ section {
   margin-top: 32px;
 }
 
-nav .navbar {
-  margin: 0 0;
+.navbar {
+  margin: 0;
   padding: 0 0;
   font-size: medium;
 }
 
-nav.navbar-fixed-top {
+.navbar-fixed-top {
   border-color: #000;
 }
 
-nav.navbar-brand > img {
+.navbar-brand > img {
   height: 20px;
 }
 
@@ -78,7 +78,7 @@ nav.navbar-brand > img {
 
 @media (min-width: 768px) {
   /* settings for tablets and up */
-  nav.navbar {
+  .navbar {
     margin: 0 0;
     font-size: medium;
     padding: 25px 0;
@@ -182,7 +182,6 @@ old approach
   max-width: 240px;
 }
 
-
 /* Sidebar */
 #archives > ul {
   list-style: none;
@@ -202,6 +201,11 @@ old approach
 }
 
 /* new code */
+.post-left-col,
+.post-right-col {
+  margin-bottom: 50px;
+}
+
 .post-left-col > :first-child {
   margin-top: 0;
   padding-top: 0;

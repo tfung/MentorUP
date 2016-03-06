@@ -37,6 +37,10 @@ the_post();
 <div class="post" style="margin-bottom: 50px;">
   <div class="container">
 
+    <?php 
+    // Checks if the posts contain meta data
+    if ($event_date || $event_time || $event_location || $event_ticket_cost || $event_ticket_url):?>
+
     <div class="row-fluid" style="margin-top: 50px;">
       <div class="col-md-12">
         <h1 style="font-weight: bold;"><?php the_title(); ?></h1>
@@ -44,6 +48,7 @@ the_post();
         <br>
       </div>
     </div>
+
     <div class="row-fluid">
       <div class="col-md-4 post-left-col">
         <?php if ($event_date): ?>
@@ -65,21 +70,46 @@ the_post();
           <p><?php echo nl2br($event_ticket_cost); ?></p>
         <?php endif; ?>
 
-        <br>
-        <br>
-
         <?php if ($event_ticket_url) :?>
-            <br/><br/>
+            <br><br>
             <a style="display: inline-block;" target="_blank" href="<?php echo $event_ticket_url;?>" class="btn btn-success btn-md">Purchase Tickets</a>
         <?php endif; ?>
+
       </div>
       <div class="col-md-8 post-right-col">
-
+        <?php if ($event_image) :?>
+            <img src="<?php echo $event_image; ?>" alt="<?php the_title() ?>">
+        <?php endif; ?>
 
         <?php the_content(); ?>
+      </div>
     </div>
+
+    <?php 
+    // section used to maintain legacy posts
+    else: ?>
+    
+    <div class="row-fluid" style="margin-top: 50px;">
+      <div class="col-md-12">
+        <h1 style="font-weight: bold; text-align: center;"><?php the_title(); ?></h1>
+        <br>
+        <br>
+      </div>
     </div>
-  </div>
+
+    <div class="row-fluid">
+      <div class="col-md-offset-2 col-md-8">
+        <?php if ($event_image) :?>
+            <img src="<?php echo $event_image; ?>" alt="<?php the_title() ?>">
+        <?php endif; ?>
+
+        <?php the_content(); ?>
+      </div>
+    </div>
+
+    <?php endif; ?>
+
+    </div>
 </div>
 
 <?php get_footer(); ?>

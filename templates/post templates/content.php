@@ -46,13 +46,6 @@ the_post();
         
         <br/><br/>
         <?php the_content(); ?>
-
-        <?php if ($event_ticket_url) :?>
-            <br/><br/>
-            <div style="display: block; text-align: center;">
-                <a style="display: inline-block;" target="_blank" href="<?php echo $event_ticket_url;?>" class="btn btn-success btn-md">Purchase Tickets</a>
-            </div>
-        <?php endif; ?>
       </div>
     </div>
   </div>
