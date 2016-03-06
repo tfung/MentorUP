@@ -1,5 +1,7 @@
 <?php 
 
+the_post(); 
+
 $meta_date = get_post_meta(get_the_id(), 'event_date', true);
 $meta_start_time = get_post_meta(get_the_id(), 'event_start_time', true);
 $meta_end_time = get_post_meta(get_the_id(), 'event_end_time', true);
@@ -30,8 +32,6 @@ else if ($event_date || $event_time) {
     $event_date_header = ($event_date ? $event_date : $event_time);
 }
 
-get_header(); 
-the_post(); 
 ?>
 
 <div class="post" style="margin-bottom: 50px;">
@@ -111,5 +111,3 @@ the_post();
 
     </div>
 </div>
-
-<?php get_footer(); ?>

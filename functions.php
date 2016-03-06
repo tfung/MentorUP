@@ -8,9 +8,11 @@ require_once( __DIR__ . '/helper functions/wp_bootstrap_navwalker.php');
 require_once( __DIR__ . '/helper functions/theme_customizer.php');
 require_once( __DIR__ . '/helper functions/cmb_customizations.php');
 
-register_nav_menus( array(
-  'primary' => __( 'Primary Menu', 'wpbootstrap' ),
-  ) );
+register_nav_menus( 
+  array(
+    'primary' => __( 'Primary Menu', 'wpbootstrap' ),
+  )
+);
 
 function enqueue_javascript()
 {
@@ -24,7 +26,7 @@ function enqueue_javascript()
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_javascript' );
 
-if ( function_exists('register_sidebar') )
+if (function_exists('register_sidebar'))
 {
   register_sidebar(array(
     'before_widget' => '',

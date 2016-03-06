@@ -1,5 +1,7 @@
 <?php 
 
+the_post(); 
+
 $meta_date = get_post_meta(get_the_id(), 'event_date', true);
 $meta_start_time = get_post_meta(get_the_id(), 'event_start_time', true);
 $meta_end_time = get_post_meta(get_the_id(), 'event_end_time', true);
@@ -20,7 +22,6 @@ $event_end_time = $meta_end_time
 $event_time = $event_start_time && $event_end_time 
                 ? $event_start_time . " - " . $event_end_time : null;
 
-the_post(); 
 ?>
 
 <div class="post">
