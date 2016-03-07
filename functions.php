@@ -36,4 +36,9 @@ if (function_exists('register_sidebar'))
   ));
 }
 
+function excerpt_more_override($more) {
+  return '...';
+}
+add_filter( 'excerpt_more', 'excerpt_more_override' );
+
 ?>
