@@ -39,11 +39,11 @@ get_header();
     <div class="container">
       <div class="carousel-caption">
         <?php if (!empty($site_logo)) : ?>
-          <img src="<?php echo $site_logo; ?>" alt="MentorUP">
+          <img src="<?php echo $site_logo; ?>" alt="MentorUP Alberta">
         <?php else: ?>
-          <h1 style="font-size: 70px;">MentorUP</h1><br/>
+          <h1 style="font-size: 70px;"><?php bloginfo( 'name' ); ?></h1><br/>
         <?php endif; ?>
-        <h2>Premier Society of Leading Technical Professionals</h2>
+        <h2><?php bloginfo('description'); ?></h2>
       </div>
     </div>
   </div>
