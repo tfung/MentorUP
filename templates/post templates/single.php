@@ -1,7 +1,5 @@
 <?php 
 
-the_post(); 
-
 $meta_date = get_post_meta(get_the_id(), 'event_date', true);
 $meta_start_time = get_post_meta(get_the_id(), 'event_start_time', true);
 $meta_end_time = get_post_meta(get_the_id(), 'event_end_time', true);

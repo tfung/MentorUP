@@ -12,12 +12,18 @@ function post_metabox() {
     $cmb = new_cmb2_box( array(
         'id'            => 'event_data',
         'title'         => 'Event Data',
-        'object_types'  => array( 'post' ), // post type
+        'object_types'  => array('post'), // post type
         'context'       => 'normal', // 'normal', 'advanced' or 'side'
         'priority'      => 'high', // 'high', 'core', 'default' or 'low'
         'show_names'    => true, // show field names on the left
         'cmb_styles'    => true, // false to disable the CMB stylesheet
         'closed'        => false, // keep the metabox closed by default
+    ));
+
+    $cmb->add_field(array(
+        'id'   => 'event_city',
+        'name' => 'City',
+        'type' => 'text',
     ));
 
     $cmb->add_field(array(

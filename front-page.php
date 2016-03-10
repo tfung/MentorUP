@@ -138,34 +138,33 @@ get_header();
 </section>
 <?php endif; ?>
 
+<?php 
+  $query_category = 'Upcoming Events';
+  $category_slug = 'upcoming-events';
+  $post_limit = 3;
+
+  $query = new WP_Query(array(
+    'category_name' => $query_category
+  ));
+
+if ($query->post_count > 0) : 
+?>
 <section id="upcoming" style="background: #FDF3E7;">
   <div class="row">
-    <div class="col-md-6">
-      <h2 class="post-header">Edmonton Events</h2>
-      <?php query_posts('showposts=3&category_name=Edmonton Events');
+    <div class="col-md-offset-2 col-md-8">
+      <h2 class="post-header"><?php echo $query_category; ?></h2>
+      <?php 
+        for($i=0; $i<$post_limit and $i<$query->post_count; $i++) {
+          $query->the_post();
+          get_template_part('templates/post templates/content', 'upcoming');
+        }
 
-      while (have_posts()) : the_post(); ?>
-        <h3><a class="post-link" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-        <p><?php the_excerpt(__('(more…)')); ?></p>
-      <?php endwhile; ?>
-
-      <br>
-      <h4 class="text-center"><a class="post-link" href="./category/events/edmonton-events">See More</a></h4>
+        if ($query->post_count > $post_limit) : ?>
+          <br>
+          <h4 class="text-center"><a class="post-link" href="<?php echo sprintf('./category/events/%s', $category_slug); ?>">See more events</a></h4>
+      <?php endif; ?>
     </div>
-    <div class="col-md-6">
-      <h2 class="post-header">Calgary Events</h2>
-      <?php query_posts('showposts=3&category_name=Calgary Events');
-
-      while (have_posts()) : the_post(); ?>
-
-        <h3><a class="post-link" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-        <p><?php the_excerpt(__('(more…)')); ?></p>
-      <?php endwhile; ?>
-
-    <br>
-    <h4 class="text-center"><a class="post-link" href="./category/events/calgary-events">See More</a></h4>
-    </div>
-  </div>
 </section>
+<?php endif; ?>
 
 <?php get_footer(); ?>

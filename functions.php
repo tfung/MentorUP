@@ -7,12 +7,24 @@ require_once( __DIR__ . '/plugins/cmb2/init.php');
 require_once( __DIR__ . '/helper functions/wp_bootstrap_navwalker.php');
 require_once( __DIR__ . '/helper functions/theme_customizer.php');
 require_once( __DIR__ . '/helper functions/cmb_customizations.php');
+require_once( __DIR__ . '/helper functions/post_helper.php');
+require_once( __DIR__ . '/helper functions/wordpress_customizations.php');
 
 register_nav_menus( 
   array(
     'primary' => __( 'Primary Menu', 'wpbootstrap' ),
   )
 );
+
+if (function_exists('register_sidebar'))
+{
+  register_sidebar(array(
+    'before_widget' => '',
+    'after_widget' => '',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>',
+  ));
+}
 
 function enqueue_javascript()
 {
@@ -25,20 +37,5 @@ function enqueue_javascript()
   wp_enqueue_script( 'parallax_js');
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_javascript' );
-
-if (function_exists('register_sidebar'))
-{
-  register_sidebar(array(
-    'before_widget' => '',
-    'after_widget' => '',
-    'before_title' => '<h3>',
-    'after_title' => '</h3>',
-  ));
-}
-
-function excerpt_more_override($more) {
-  return '...';
-}
-add_filter( 'excerpt_more', 'excerpt_more_override' );
 
 ?>

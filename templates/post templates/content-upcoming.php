@@ -4,6 +4,7 @@ $meta_date = get_post_meta(get_the_id(), 'event_date', true);
 $meta_start_time = get_post_meta(get_the_id(), 'event_start_time', true);
 $meta_end_time = get_post_meta(get_the_id(), 'event_end_time', true);
 
+$event_city = get_post_meta(get_the_id(), 'event_city', true);
 $event_location = get_post_meta(get_the_id(), 'event_location', true);
 $event_image = get_post_meta(get_the_id(), 'event_image', true);
 $event_ticket_url = get_post_meta(get_the_id(), 'event_ticket_url', true);
@@ -23,6 +24,7 @@ $event_time = $event_start_time && $event_end_time
 
 $event_subheading = implode(" | ", 
   array_filter(array(
+      $event_city,
       $event_date,
       $event_time
   ))
@@ -31,19 +33,11 @@ $event_subheading = implode(" | ",
 ?>
 
 <div class="post">
-  <div class="container">
-    <div class="row-fluid">
-      <div class="col-md-offset-2 col-md-8">
-
-        <h2 style="font-weight: bold;"><a class="post-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-        <?php if ($event_subheading): ?>
-          <p style="margin: 0; font-style: italic;"><?php echo $event_subheading; ?></p>
-        <?php endif; ?>
-        <p><?php the_excerpt(__('(more…)')); ?></p>
-
-      </div>
-    </div>
-  </div>
+  <h2 style="font-weight: bold;"><a class="post-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+  <?php if ($event_subheading): ?>
+    <p style="margin: 0; font-style: italic;"><?php echo $event_subheading; ?></p>
+  <?php endif; ?>
+  <p><?php the_excerpt(__('(more…)')); ?></p>
 </div>
 
 <!--hr class="post-divider"/-->

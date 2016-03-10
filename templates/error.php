@@ -1,1 +1,1 @@
-<p><?php _e('Sorry, this page does not exist.'); ?></p>
+<p style="text-align: center;"><?php _e('This event does not exist.'); ?></p>
