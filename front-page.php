@@ -154,7 +154,7 @@ if ($query->post_count > 0) :
     <div class="col-md-offset-2 col-md-8">
       <h2 class="post-header"><?php echo $query_category; ?></h2>
       <?php 
-        for($i=0; $i<$post_limit and $i<$query->post_count; $i++) {
+        for($i=0; $i<$post_limit && $i<$query->post_count; $i++) {
           $query->the_post();
           get_template_part('templates/post templates/content', 'upcoming');
         }
