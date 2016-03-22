@@ -22,44 +22,72 @@ function post_metabox() {
 
     $cmb->add_field(array(
         'id'   => 'event_city',
-        'name' => 'City',
+        'name' => 'City *',
         'type' => 'text',
+        'attributes' => array(
+            'required' => 'required',
+            'placeholder' => 'required',
+        ),
     ));
 
     $cmb->add_field(array(
         'id'   => 'event_location',
-        'name' => 'Location',
+        'name' => 'Location *',
         'type' => 'text',
+        'attributes' => array(
+            'required' => 'required',
+            'placeholder' => 'required',
+        ),
     ));
 
     $cmb->add_field(array(
         'id'   => 'event_date',
-        'name' => 'Date',
+        'name' => 'Date *',
         'type' => 'text_date_timestamp',
+        'attributes' => array(
+            'required' => 'required',
+            'placeholder' => 'required',
+        ),
     ));
 
     $cmb->add_field(array(
         'id'   => 'event_start_time',
-        'name' => 'Start Time',
+        'name' => 'Start Time *',
         'type' => 'text_time',
+        'attributes' => array(
+            'required' => 'required',
+            'placeholder' => 'required',
+        ),
     ));
 
     $cmb->add_field(array(
         'id'   => 'event_end_time',
-        'name' => 'End Time',
+        'name' => 'End Time *',
         'type' => 'text_time',
+        'attributes' => array(
+            'required' => 'required',
+            'placeholder' => 'required',
+        ),
     ));
 
     $cmb->add_field(array(
         'id'   => 'event_ticket_url',
-        'name' => 'Ticket URL',
+        'name' => 'Ticket URL *',
         'type' => 'text_url',
+        'attributes' => array(
+            'required' => 'required',
+            'placeholder' => 'required',
+        ),
     ));
 
     $cmb->add_field( array(
         'id' => 'event_ticket_cost',
-        'name' => 'Ticket Cost',
-        'type' => 'textarea'
+        'name' => 'Ticket Cost *',
+        'type' => 'textarea',
+        'attributes' => array(
+            'required' => 'required',
+            'placeholder' => 'required',
+        ),
     ));
 
     $cmb->add_field( array(
