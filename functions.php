@@ -38,4 +38,19 @@ function enqueue_javascript()
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_javascript' );
 
+function enqueue_stylesheets()
+{
+  wp_enqueue_style( 'animate_css', get_stylesheet_directory_uri() . "/assets/css/animate.min.css" );
+  if(is_front_page()){
+    wp_enqueue_style( 'mentorup-beta', get_stylesheet_directory_uri() . "/assets/css/mentorup-beta.css" );
+  }
+  else
+  {
+    //wp_enqueue_style( 'mentorup', get_stylesheet_directory_uri() . "/assets/css/mentorup.css" );
+    wp_enqueue_style( 'mentorup-beta', get_stylesheet_directory_uri() . "/assets/css/mentorup-beta.css" );
+  }
+
+}
+add_action('wp_enqueue_scripts','enqueue_stylesheets');
+
 ?>
