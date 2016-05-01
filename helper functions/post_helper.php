@@ -16,4 +16,14 @@ function show_no_posts($message)
   echo $result;
 }
 
+function get_page_title()
+{
+  if (is_single() || is_page()) {
+    the_title();
+  }
+  else {
+    single_cat_title();
+  }
+}
+
 ?>

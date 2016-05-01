@@ -1,7 +1,6 @@
 <?php
 
-$site_logo = get_theme_mod('site_logo');
-$navbar_logo = get_theme_mod('navbar_logo');
+// TODO: remove redundant settings
 
 $main_image_1 = get_theme_mod('main_image_1');
 $main_image_2 = get_theme_mod('main_image_2');
@@ -20,106 +19,15 @@ $partners_title_color = get_theme_mod('partners_title_color');
 $partners_background_color = get_theme_mod('partners_background_color');
 
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>MentorUP Alberta</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
 
-  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-      <![endif]-->
-
-      <?php wp_enqueue_script("jquery"); ?>
-      <?php wp_head(); ?>
-    </head>
-    <body>
-
-    <div class="container-full">
-<!-- end head -->
-<!-- body start -->
-
-<?php
-  $site_logo = get_theme_mod('site_logo');
-  $navbar_logo = get_theme_mod('navbar_logo');
-?>
-
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-list" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="<?php echo site_url(); ?>">
-          <?php echo bloginfo('name'); ?>
-        </a>
-      </div>
-
-      <?php
-      wp_nav_menu( array(
-        'menu'              => 'primary',
-        'theme_location'    => 'primary',
-        'depth'             => 2,
-        'container'         => 'div',
-        'container_class'   => 'collapse navbar-collapse',
-        'container_id'      => 'navbar-list',
-        'menu_class'        => 'nav navbar-nav navbar-right',
-        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-        'walker'            => new wp_bootstrap_navwalker())
-      );
-      ?>
-
-    </div>
-  </nav>
+<?php get_header(); ?>
 
 <div id="landing-screen" class="full-page-background" style="background-image: url(&quot;<?php echo $main_image_1; ?>&quot;);">
-  <nav class="navbar navbar-transparent">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-list" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="<?php echo site_url(); ?>">
-          <?php if (!empty($navbar_logo)) : ?>
-            <img src="<?php echo $navbar_logo; ?>" alt="<?php echo bloginfo('name'); ?>">
-          <?php 
-            else: 
-              echo bloginfo('name');
-            endif; 
-          ?>
-        </a>
-      </div>
-
-      <?php
-      wp_nav_menu( array(
-        'menu'              => 'primary',
-        'theme_location'    => 'primary',
-        'depth'             => 2,
-        'container'         => 'div',
-        'container_class'   => 'collapse navbar-collapse',
-        'container_id'      => 'navbar-list',
-        'menu_class'        => 'nav navbar-nav navbar-right',
-        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-        'walker'            => new wp_bootstrap_navwalker())
-      );
-      ?>
-
-    </div>
-  </nav>
-  <h1><!-- maybe add container -->
+  <!-- TODO: add container -->
+  <h1 style="margin: 0">
     <span class="full-page-header"><?php bloginfo('description'); ?></span>
   </h1>
 </div>
-
 
 <section id="about">
   <div class="container">
@@ -149,7 +57,7 @@ $partners_background_color = get_theme_mod('partners_background_color');
       array(
         'key' => 'event_date',
         'value' => time(),
-        'compare' => '<',
+        'compare' => '<', // TODO: Invalid dates queried
       )));
 
   $event_query = new WP_Query($query_events);
@@ -163,7 +71,7 @@ $partners_background_color = get_theme_mod('partners_background_color');
       </div>
 
       <div class="col-md-6">
-        <div class="column-image" style="background-image: url('http://loblawdigital.co/wp-content/uploads/2016/03/mid.jpg');">
+        <div class="column-image" style="background-image: url('http://placehold.it/350x150');">
           <div class="image-side-tag">
             <span>Past Event Heading</span>  
           </div>
@@ -179,7 +87,7 @@ $partners_background_color = get_theme_mod('partners_background_color');
             <li>
               <a href="<?php the_permalink(); ?>">
                 <div class="event">
-                  <div class="event-date" >
+                  <div class="event-date">
                     <span><?php echo date('M d', get_post_meta(get_the_id(), 'event_date', true)); ?></span>
                     <span><?php echo get_post_meta(get_the_id(), 'event_start_time', true); ?></span>
                   </div>
@@ -202,62 +110,6 @@ $partners_background_color = get_theme_mod('partners_background_color');
     </div>
   </div>
 </section>
-
-<!--
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-
-
-
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-          </ol>
-
-
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <img src="http://loblawdigital.co/wp-content/uploads/2016/03/mid.jpg" alt="Chania">
-            </div>
-
-            <div class="item">
-              <img src="http://loblawdigital.co/wp-content/uploads/2016/03/mid.jpg" alt="Chania">
-            </div>
-
-            <div class="item">
-              <img src="http://loblawdigital.co/wp-content/uploads/2016/03/mid.jpg" alt="Flower">
-            </div>
-
-            <div class="item">
-              <img src="http://loblawdigital.co/wp-content/uploads/2016/03/mid.jpg" alt="Flower">
-            </div>
-          </div>
-
-
-          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-
-        <p>Some caption</p>
-
-      </div>
-    </div>
-  </div>
-
-</section>
--->
 
 <?php if (!empty($sponsors_content) && !empty($partners_content)) : // TODO: Make flexible ?>
 <section id="sponsors-partners" class="light-blue-background" >

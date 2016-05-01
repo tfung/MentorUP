@@ -1,6 +1,7 @@
-<?php 
+<?php get_header(); ?>
 
-get_header(); 
+<?php
+get_template_part('templates/partial-header');
 
 if (have_posts()) : 
   while (have_posts()) :  

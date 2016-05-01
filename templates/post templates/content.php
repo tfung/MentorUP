@@ -35,7 +35,7 @@ $event_subheading = implode(" | ",
     <div class="row-fluid">
       <div class="col-md-offset-2 col-md-8">
 
-        <h2 style="font-weight: bold;"><a class="post-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <h2 style="font-weight: bold; color: #2982D8;"><a class="post-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
         <?php if ($event_subheading): ?>
           <p style="margin: 0; font-style: italic;"><?php echo $event_subheading; ?></p>
         <?php endif; ?>
@@ -45,5 +45,3 @@ $event_subheading = implode(" | ",
     </div>
   </div>
 </div>
-
-<!--hr class="post-divider"/-->

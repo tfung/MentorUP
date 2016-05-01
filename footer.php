@@ -7,6 +7,8 @@ $twitter_url = get_theme_mod('twitter_url');
 $linkedin_url = get_theme_mod('linkedin_url');
 
 ?>
+<!-- end body -->
+</div>
 
 <div id="footer-padding"></div>
 

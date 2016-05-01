@@ -1,7 +1,4 @@
 @import url('bootstrap-navbar-theme-transparent.css');
-@import url('hover-min.css');
-/* temp */
-/*@import url('pages/front-page.css');*/
 
 html {
   height: 100%;
@@ -20,6 +17,13 @@ section h2 {
   font-weight: bold;
   font-size: 30px;
   padding: 20px 0;
+}
+
+* {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .h3-header {
@@ -116,13 +120,6 @@ hr {
   float: left;
 }
 
-/* navbar */
-.navbar {
-  margin: 0;
-  padding: 0 0;
-  font-size: medium;
-}
-
 .full-page-background {
   height: 100vh;
   color: #FFF;
@@ -130,14 +127,49 @@ hr {
   background-repeat: no-repeat;
   background-position: center;
 }
-.full-page-background .navbar-brand > img {
+.partial-page-background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.partial-page-background .partial-page-header > * {
+  font-size: 40px;
+  color: #FFF;
+}
+.partial-page-background .partial-page-upper > * {
+  font-size: 18px;
+  color: #D0D0D0;
+}
+.partial-page-background .partial-page-lower > * {
+  color: #D0D0D0;
+  margin: 0;
+  padding: 2px 0;
+}
+
+/* navbar */
+.navbar {
+  margin: 0;
+  padding: 0 0;
+  font-size: medium;
+}
+.navbar-brand > .navbar-brand-img {
   width: auto;
   height: auto;
   max-width: 200px;
   max-height: 75px;
 }
-.full-page-background > .navbar {
+.navbar-brand > .navbar-brand-fixedtop-img {
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  max-height: 40px;
+  margin-top: -20px;
+}
+.navbar {
   padding: 25px 30px 0 30px;
+}
+.navbar-fixedtop-margin {
+  margin-top: -10px;
 }
 
 .events-list {
@@ -229,6 +261,58 @@ hr {
   color: #FFF;
 }
 
+.btn-custom-ghost-white {
+  background-color: transparent;
+  border: 2px solid #FFF;
+  color: #FFF;
+}
+.btn-custom-ghost-white:link,
+.btn-custom-ghost-white:hover,
+.btn-custom-ghost-white:active,
+.btn-custom-ghost-white:visited {
+  background-color: #FFF;
+  color: #000;
+}
+
+.btn-custom-ghost-green {
+  background-color: transparent;
+  border: 2px solid #01FF70;
+  color: #01FF70;
+}
+.btn-custom-ghost-green:link,
+.btn-custom-ghost-green:hover,
+.btn-custom-ghost-green:active,
+.btn-custom-ghost-green:visited {
+  background-color: #01FF70;
+  color: #000;
+}
+
+.btn-custom-ghost-red {
+  background-color: transparent;
+  border: 2px solid #FF4136;
+  color: #FF4136;
+}
+.btn-custom-ghost-red:link,
+.btn-custom-ghost-red:hover,
+.btn-custom-ghost-red:active,
+.btn-custom-ghost-red:visited {
+  background-color: #FF4136;
+  color: #000;
+}
+
+.btn-custom-ghost-blue {
+  background-color: transparent;
+  border: 2px solid #7FDBFF;
+  color: #7FDBFF;
+}
+.btn-custom-ghost-blue:link,
+.btn-custom-ghost-blue:hover,
+.btn-custom-ghost-blue:active,
+.btn-custom-ghost-blue:visited {
+  background-color: #7FDBFF;
+  color: #000;
+}
+
 /* pagination */
 .pagination-outer {
   text-align: center;
@@ -247,11 +331,17 @@ hr {
   text-decoration: underline;
 }
 
+.icon-padding {
+  padding-right: 4px;
+}
+
+.post img {
+  margin-bottom: 20px;
+  max-width: 100% !important;
+}
+
 /* phones & up */
 @media (max-width: 768px) {
-  h2 {
-    font-size: 0.8em;
-  }
   .section-font {
     font-size: 18px;
   }
@@ -280,6 +370,9 @@ hr {
   }
   .mobile-center {
     text-align: center;
+  }
+  .mobile-btn-full-width {
+    width: 100%;
   }
   .column-image {
     min-height: 230px; 
@@ -331,6 +424,11 @@ hr {
   }
   .tablet-float-right {
     float: right;
+  }
+  .tablet-column-pull-bottom {
+    display: inline-block;
+    vertical-align: bottom;
+    float: none;
   }
   .column-image {
     min-height: 350px; 

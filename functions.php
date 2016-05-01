@@ -30,26 +30,15 @@ function enqueue_javascript()
 {
   wp_register_script( 'bootstrap_js', get_template_directory_uri() . '/assets/third-party/bootstrap-3.3.6/js/bootstrap.js', array( 'jquery' ), '3.3.6', true );
   wp_register_script( 'base_js', get_template_directory_uri() . '/assets/js/base.js', array( 'jquery' ), '1.0.0', true );
-  wp_register_script( 'parallax_js', get_template_directory_uri() . '/assets/third-party/parallax.js-1.3.1/parallax.min.js', array( 'jquery' ), '1.3.1', true );
 
   wp_enqueue_script( 'bootstrap_js' );
   wp_enqueue_script( 'base_js' );
-  wp_enqueue_script( 'parallax_js');
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_javascript' );
 
 function enqueue_stylesheets()
 {
-  wp_enqueue_style( 'animate_css', get_stylesheet_directory_uri() . "/assets/css/animate.min.css" );
-  if(is_front_page()){
-    wp_enqueue_style( 'mentorup-beta', get_stylesheet_directory_uri() . "/assets/css/mentorup-beta.css" );
-  }
-  else
-  {
-    //wp_enqueue_style( 'mentorup', get_stylesheet_directory_uri() . "/assets/css/mentorup.css" );
-    wp_enqueue_style( 'mentorup-beta', get_stylesheet_directory_uri() . "/assets/css/mentorup-beta.css" );
-  }
-
+  wp_enqueue_style( 'mentorup-beta', get_stylesheet_directory_uri() . "/assets/css/mentorup-beta.css" );
 }
 add_action('wp_enqueue_scripts','enqueue_stylesheets');
 

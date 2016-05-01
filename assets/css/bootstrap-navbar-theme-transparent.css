@@ -1,0 +1,76 @@
+.navbar-transparent {
+  background-color: transparent;
+  border-color: none;
+}
+.navbar-transparent .navbar-brand {
+  color: #ffffff;
+}
+.navbar-transparent .navbar-brand:hover,
+.navbar-transparent .navbar-brand:focus {
+  color: #ffffff;
+}
+.navbar-transparent .navbar-text {
+  color: #ffffff;
+}
+.navbar-transparent .navbar-nav > li {
+  margin: 0 15px;
+}
+.navbar-transparent .navbar-nav > li > a {
+  color: #ffffff;
+  padding: 10px 5px;
+}
+.navbar-transparent .navbar-nav > li > a:hover,
+.navbar-transparent .navbar-nav > li > a:focus {
+  background-color: transparent;
+  /*text-decoration: underline;*/
+  color: #ffffff;
+  border-bottom: thick solid #1298C1;
+}
+.navbar-transparent .navbar-nav > .active > a,
+.navbar-transparent .navbar-nav > .active > a:hover,
+.navbar-transparent .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+.navbar-transparent .navbar-nav > .open > a,
+.navbar-transparent .navbar-nav > .open > a:hover,
+.navbar-transparent .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+.navbar-transparent .navbar-toggle {
+  border-color: none;
+}
+.navbar-transparent .navbar-toggle:hover,
+.navbar-transparent .navbar-toggle:focus {
+  background-color: transparent;
+}
+.navbar-transparent .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.navbar-transparent .navbar-collapse,
+.navbar-transparent .navbar-form {
+  border-color: none;
+}
+.navbar-transparent .navbar-link {
+  color: #ffffff;
+}
+.navbar-transparent .navbar-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .navbar-transparent .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-transparent .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-transparent .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .navbar-transparent .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-transparent .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-transparent .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: transparent;
+  }
+}
