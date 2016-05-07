@@ -22,7 +22,6 @@
 .navbar-transparent .navbar-nav > li > a:hover,
 .navbar-transparent .navbar-nav > li > a:focus {
   background-color: transparent;
-  /*text-decoration: underline;*/
   color: #ffffff;
   border-bottom: thick solid #1298C1;
 }

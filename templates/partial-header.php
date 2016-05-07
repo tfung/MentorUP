@@ -48,7 +48,7 @@ $event_city = ($event_city ? $event_city . ', Alberta' : "");
       </div>
       <div class="col-md-3 tablet-column-pull-bottom mobile-center">
         <br>
-        <button type="button" class="btn-lg btn-custom-ghost-green tablet-float-right mobile-btn-full-width">Purchase Tickets</button>
+        <a href="<?php echo $event_ticket_url; ?>" target="_blank" class="btn-lg btn-custom-ghost-green tablet-float-right mobile-link-full-width">Purchase Tickets</a>
       </div>
     </div>
     <?php endif; ?>

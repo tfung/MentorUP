@@ -246,71 +246,76 @@ hr {
   display: inline-block;
 }
 
-.btn-custom-blue {
+.btn-custom-blue,
+.btn-custom-blue:link,
+.btn-custom-blue:visited {
   background-color: #007EA1; 
   padding: 5px 20px;
   color: #FFF;
+  text-decoration: none;
 }
-
-.btn-custom-blue:link,
 .btn-custom-blue:hover,
-.btn-custom-blue:active,
-.btn-custom-blue:visited {
+.btn-custom-blue:active {
   text-decoration: none;
   background-color: #58D2F7;
   color: #FFF;
+  text-decoration: none;
 }
-
-.btn-custom-ghost-white {
+.btn-custom-ghost-white,
+.btn-custom-ghost-white:link,
+.btn-custom-ghost-white:visited {
   background-color: transparent;
   border: 2px solid #FFF;
   color: #FFF;
+  text-decoration: none;
 }
-.btn-custom-ghost-white:link,
 .btn-custom-ghost-white:hover,
-.btn-custom-ghost-white:active,
-.btn-custom-ghost-white:visited {
+.btn-custom-ghost-white:active {
   background-color: #FFF;
   color: #000;
+  text-decoration: none;
 }
-
-.btn-custom-ghost-green {
+.btn-custom-ghost-green,
+.btn-custom-ghost-green:link,
+.btn-custom-ghost-green:visited {
   background-color: transparent;
   border: 2px solid #01FF70;
   color: #01FF70;
+  text-decoration: none;
 }
-.btn-custom-ghost-green:link,
 .btn-custom-ghost-green:hover,
-.btn-custom-ghost-green:active,
-.btn-custom-ghost-green:visited {
+.btn-custom-ghost-green:active {
   background-color: #01FF70;
   color: #000;
+  text-decoration: none;
 }
-
-.btn-custom-ghost-red {
+.btn-custom-ghost-red,
+.btn-custom-ghost-red:link,
+.btn-custom-ghost-red:visited {
   background-color: transparent;
   border: 2px solid #FF4136;
   color: #FF4136;
+  text-decoration: none;
 }
-.btn-custom-ghost-red:link,
 .btn-custom-ghost-red:hover,
-.btn-custom-ghost-red:active,
-.btn-custom-ghost-red:visited {
+.btn-custom-ghost-red:active {
   background-color: #FF4136;
   color: #000;
+  text-decoration: none;
 }
-
-.btn-custom-ghost-blue {
+.btn-custom-ghost-blue,
+.btn-custom-ghost-blue:link,
+.btn-custom-ghost-blue:visited {
   background-color: transparent;
   border: 2px solid #7FDBFF;
   color: #7FDBFF;
+  text-decoration: none;
 }
-.btn-custom-ghost-blue:link,
 .btn-custom-ghost-blue:hover,
-.btn-custom-ghost-blue:active,
-.btn-custom-ghost-blue:visited {
+.btn-custom-ghost-blue:active {
   background-color: #7FDBFF;
   color: #000;
+  text-decoration: none;
 }
 
 /* pagination */
@@ -373,6 +378,9 @@ hr {
   }
   .mobile-btn-full-width {
     width: 100%;
+  }
+  .mobile-link-full-width {
+    display: block;
   }
   .column-image {
     min-height: 230px; 

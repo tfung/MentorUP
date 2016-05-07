@@ -21,7 +21,7 @@ $linkedin_url = get_theme_mod('linkedin_url');
           <span>Sign up for the newsletter to stay on top of what's happening!</span>
         </div>
         <div class="col-md-4 col-sm-6 mobile-column-padding mobile-center">
-          <button class="btn btn-custom-blue tablet-float-right" data-toggle="modal" data-target="#myModal">Sign Up</button>
+          <?php echo do_shortcode('[newsletter_registration_modal_form]'); ?>
         </div>
       </div>
     </div>
@@ -54,48 +54,6 @@ $linkedin_url = get_theme_mod('linkedin_url');
       </div>
     </div>
   </div>
-
-<!-- modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-vertical-adjustment" role="document">
-    <div class="modal-content">
-      <form class="form-horizontal">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-        </div>
-        <div class="modal-body">
-
-          <div class="form-group">
-            <label for="inputFirstName" class="col-sm-4 control-label">First Name</label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" id="inputFirstName">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="inputLastName" class="col-sm-4 control-label">Last Name</label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" id="inputLastName">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="inputEmail" class="col-sm-4 control-label">Email</label>
-            <div class="col-sm-8">
-              <input type="email" class="form-control" id="inputEmail">
-            </div>
-          </div>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-custom-blue">Save changes</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
 
 </footer>
 

@@ -12,9 +12,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-<!--       <a class="navbar-brand" href="<?php echo site_url(); ?>">
-        <?php echo bloginfo('name'); ?>
-      </a> -->
       <a class="navbar-brand" href="<?php echo site_url(); ?>">
         <?php if (!empty($navbar_logo)) : ?>
           <img class="navbar-brand-img" src="<?php echo $navbar_logo; ?>" alt="<?php echo bloginfo('name'); ?>">

@@ -3,6 +3,9 @@
 // plugins
 require_once( __DIR__ . '/plugins/cmb2/init.php');
 
+// shortcodes
+require_once( __DIR__ . '/short codes/contact form/contact_form.php');
+
 // helper functions
 require_once( __DIR__ . '/helper functions/wp_bootstrap_navwalker.php');
 require_once( __DIR__ . '/helper functions/theme_customizer.php');
