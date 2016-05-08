@@ -1,29 +1,20 @@
 <?php
 
-// TODO: remove redundant settings
-
-$main_image_1 = get_theme_mod('main_image_1');
-$main_image_2 = get_theme_mod('main_image_2');
+$front_page_landing_image = get_theme_mod('front_page_landing_image');
+$front_page_secondary_image = get_theme_mod('front_page_secondary_image');
 $front_secondary_caption = get_theme_mod('front_secondary_caption');
 
 $about_title = get_theme_mod('about_title');
 $about_content = get_theme_mod('about_content');
 
-$sponsors_title = get_theme_mod('sponsors_title');
 $sponsors_content = get_theme_mod('sponsors_content');
-$sponsors_title_color = get_theme_mod('sponsors_title_color');
-$sponsors_background_color = get_theme_mod('sponsors_background_color');
-
-$partners_title = get_theme_mod('partners_title');
 $partners_content = get_theme_mod('partners_content');
-$partners_title_color = get_theme_mod('partners_title_color');
-$partners_background_color = get_theme_mod('partners_background_color');
 
 ?>
 
 <?php get_header(); ?>
 
-<div id="landing-screen" class="full-page-background" style="background-image: url('<?php echo $main_image_1; ?>');">
+<div id="landing-screen" class="full-page-background" style="background-image: url('<?php echo $front_page_landing_image; ?>');">
   <!-- TODO: add container -->
   <h1 style="margin: 0">
     <span class="full-page-header"><?php bloginfo('description'); ?></span>
@@ -71,7 +62,7 @@ $partners_background_color = get_theme_mod('partners_background_color');
       </div>
 
       <div class="col-md-6">
-        <div class="column-image" style="background-image: url('<?php echo $main_image_2; ?>');">
+        <div class="column-image" style="background-image: url('<?php echo $front_page_secondary_image; ?>');">
           <?php if (!empty($front_secondary_caption)) : ?>
           <div class="image-side-tag">
             <span><?php echo $front_secondary_caption; ?></span>  

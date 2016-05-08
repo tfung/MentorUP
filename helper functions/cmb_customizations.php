@@ -72,22 +72,14 @@ function post_metabox() {
 
     $cmb->add_field(array(
         'id'   => 'event_ticket_url',
-        'name' => 'Ticket URL *',
+        'name' => 'Ticket URL',
         'type' => 'text_url',
-        'attributes' => array(
-            'required' => 'required',
-            'placeholder' => 'required',
-        ),
     ));
 
     $cmb->add_field( array(
         'id' => 'event_ticket_cost',
-        'name' => 'Ticket Cost *',
+        'name' => 'Ticket Cost',
         'type' => 'textarea',
-        'attributes' => array(
-            'required' => 'required',
-            'placeholder' => 'required',
-        ),
     ));
 
     $cmb->add_field( array(

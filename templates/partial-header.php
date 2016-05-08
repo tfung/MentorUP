@@ -23,7 +23,6 @@ $event_time = $event_start_time && $event_end_time
                 ? $event_start_time . " - " . $event_end_time : null;
 
 $event_city = get_post_meta(get_the_id(), 'event_city', true);
-$event_city = ($event_city ? $event_city . ', Alberta' : "");
 
 $future_event = (strtotime($event_date) >= strtotime(date('Y-m-d e', time())));
 
