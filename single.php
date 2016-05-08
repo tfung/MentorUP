@@ -7,7 +7,7 @@ if (have_posts()) :
   get_template_part('templates/post templates/single');
 else: 
   //get_template_part('templates/error');
-  show_no_posts('This is event does not exist.');
+  show_no_posts('This event does not exist.');
 endif;
 
 get_footer(); 

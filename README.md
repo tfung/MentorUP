@@ -21,4 +21,3 @@ A custom wordpress theme built for www.mentorupalberta.com.
 * [Normalize](https://necolas.github.io/normalize.css/)
 * [jQuery](https://jquery.com/)
 * [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
-* [Parallax.js](http://pixelcog.github.io/parallax.js/)

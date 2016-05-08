@@ -55,6 +55,17 @@ function image_customizer($wp_customize) {
 		'transport' => 'refresh',
 	));
 
+	$wp_customize->add_setting( 'front_secondary_caption', array(
+		'default' => null,
+	));
+
+	$wp_customize->add_setting( 'default_page_header_image', array(
+		'default' => null,
+		'type' => 'theme_mod',
+		'capability' => 'manage_options',
+		'transport' => 'refresh',
+	));
+
 	$wp_customize->add_control( new WP_Customize_Image_Control( 
 		$wp_customize, 'main_image_1', array(
 			'label' => 'Main Image 1',
@@ -68,6 +79,20 @@ function image_customizer($wp_customize) {
 			'section' => 'site_images',
 			'settings' => 'main_image_2',
 		)));
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( 
+		$wp_customize, 'default_page_header_image', array(
+			'label' => 'Default Page Header Image',
+			'section' => 'site_images',
+			'settings' => 'default_page_header_image',
+		)));
+
+	$wp_customize->add_control( 'front_secondary_caption_control', array(
+		'label' => 'Image Caption',
+		'section' => 'site_images',
+		'settings' => 'front_secondary_caption',
+		'type' => 'text',
+	));
 }
 
 function contacts_customizer($wp_customize) {

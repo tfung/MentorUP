@@ -4,6 +4,7 @@
 
 $main_image_1 = get_theme_mod('main_image_1');
 $main_image_2 = get_theme_mod('main_image_2');
+$front_secondary_caption = get_theme_mod('front_secondary_caption');
 
 $about_title = get_theme_mod('about_title');
 $about_content = get_theme_mod('about_content');
@@ -22,7 +23,7 @@ $partners_background_color = get_theme_mod('partners_background_color');
 
 <?php get_header(); ?>
 
-<div id="landing-screen" class="full-page-background" style="background-image: url(&quot;<?php echo $main_image_1; ?>&quot;);">
+<div id="landing-screen" class="full-page-background" style="background-image: url('<?php echo $main_image_1; ?>');">
   <!-- TODO: add container -->
   <h1 style="margin: 0">
     <span class="full-page-header"><?php bloginfo('description'); ?></span>
@@ -56,10 +57,9 @@ $partners_background_color = get_theme_mod('partners_background_color');
     'meta_query' => array(
       array(
         'key' => 'event_date',
-        'value' => time(),
-        'compare' => '<', // TODO: Invalid dates queried
+        'value' => strtotime(date('Y-m-d e', time())),
+        'compare' => '>=',
       )));
-
   $event_query = new WP_Query($query_events);
 ?>
 
@@ -71,10 +71,12 @@ $partners_background_color = get_theme_mod('partners_background_color');
       </div>
 
       <div class="col-md-6">
-        <div class="column-image" style="background-image: url('http://placehold.it/350x150');">
+        <div class="column-image" style="background-image: url('<?php echo $main_image_2; ?>');">
+          <?php if (!empty($front_secondary_caption)) : ?>
           <div class="image-side-tag">
-            <span>Past Event Heading</span>  
+            <span><?php echo $front_secondary_caption; ?></span>  
           </div>
+          <?php endif; ?>
         </div>
       </div>
       <div class="col-md-6">
@@ -89,7 +91,7 @@ $partners_background_color = get_theme_mod('partners_background_color');
                 <div class="event">
                   <div class="event-date">
                     <span><?php echo date('M d', get_post_meta(get_the_id(), 'event_date', true)); ?></span>
-                    <span><?php echo get_post_meta(get_the_id(), 'event_start_time', true); ?></span>
+                    <span><?php echo date('g:iA', strtotime(get_post_meta(get_the_id(), 'event_start_time', true))); ?></span>
                   </div>
                   <div class="event-description">
                     <span><?php the_title(); ?></span>

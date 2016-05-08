@@ -4,11 +4,6 @@ $meta_date = get_post_meta(get_the_id(), 'event_date', true);
 $meta_start_time = get_post_meta(get_the_id(), 'event_start_time', true);
 $meta_end_time = get_post_meta(get_the_id(), 'event_end_time', true);
 
-$event_location = get_post_meta(get_the_id(), 'event_location', true);
-$event_image = get_post_meta(get_the_id(), 'event_image', true);
-$event_ticket_url = get_post_meta(get_the_id(), 'event_ticket_url', true);
-$event_ticket_cost = get_post_meta(get_the_id(), 'event_ticket_cost', true);
-
 // set date & time to null if empty string
 $event_date = $meta_date 
                 ? date('F d, Y', $meta_date) : null;
