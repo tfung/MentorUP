@@ -41,7 +41,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_javascript' );
 
 function enqueue_stylesheets()
 {
-  wp_enqueue_style( 'mentorup-beta', get_stylesheet_directory_uri() . "/assets/css/mentorup-beta.css" );
+  wp_enqueue_style( 'mentorup-beta', get_stylesheet_directory_uri() . "/assets/css/mentorup.css" );
 }
 add_action('wp_enqueue_scripts','enqueue_stylesheets');
 

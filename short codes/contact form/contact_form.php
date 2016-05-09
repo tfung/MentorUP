@@ -8,7 +8,7 @@ Usage:
 
 function newsletter_modal_html() {
   $html = 
-      '<button class="btn btn-custom-blue tablet-float-right" data-toggle="modal" data-target="#newsletterModal">Sign Up</button>
+      '<button class="btn btn-custom-blue" data-toggle="modal" data-target="#newsletterModal">Sign Up</button>
 
       <div id="newsletterModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog modal-vertical-adjustment" role="document">
@@ -35,6 +35,13 @@ function newsletter_modal_html() {
                 </div>
 
                 <div class="form-group">
+                  <label for="inputCity" class="col-sm-4 control-label">City</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputCity" name="inputCity">
+                  </div>
+                </div>
+
+                <div class="form-group">
                   <label for="inputEmail" class="col-sm-4 control-label">Email</label>
                   <div class="col-sm-8">
                     <input type="email" class="form-control" id="inputEmail" name="inputEmail">
@@ -43,7 +50,7 @@ function newsletter_modal_html() {
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-custom-blue" name="submit">Save changes</button>
+                <button type="submit" class="btn btn-custom-blue" name="submit">Sign Up</button>
               </div>
             </form>
           </div>
@@ -64,6 +71,7 @@ function contact_form_callback() {
   $firstname  = sanitize_text_field($data["inputFirstName"]);
   $lastname   = sanitize_text_field($data["inputLastName"]);
   $fullname   = $firstname . ' ' . $lastname;
+  $city   = sanitize_text_field($data["inputCity"]);
   $email      = sanitize_email($data["inputEmail"]);
 
   $subject    = "[Newsletter Sign Up] - $fullname";
@@ -71,6 +79,7 @@ function contact_form_callback() {
                   <p>
                   First Name: $firstname<br>
                   Last Name: $lastname<br>
+                  City: $city<br>
                   Email: $email</p>";
 
   // get the blog administrator's email address

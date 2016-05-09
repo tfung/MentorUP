@@ -132,21 +132,31 @@ hr {
   background-repeat: no-repeat;
   background-position: center;
 }
-.partial-page-background .partial-page-header > * {
+.partial-page-background .partial-page-header-text > * {
   font-size: 40px;
   color: #FFF;
 }
-.partial-page-background .partial-page-upper > * {
+.partial-page-background .partial-page-upper-text > * {
   font-size: 18px;
   color: #D0D0D0;
 }
-.partial-page-background .partial-page-lower > * {
+.partial-page-background .partial-page-lower-text > * {
   color: #D0D0D0;
   margin: 0;
   padding: 2px 0;
 }
+.partial-page-background .partial-page-lower-text > .partial-page-text-heavy {
+  font-weight: bold; 
+  font-size: 18px;
+}
 
-/* navbar */
+.partial-header-container {
+  padding-top: 100px;
+}
+.partial-header-row-padding {
+  padding-top: 20px;
+}
+
 .navbar {
   margin: 0;
   padding: 0 0;
@@ -456,12 +466,36 @@ hr {
     width: 300px;
     margin: 0 auto;
   }
+  .mobile-column-padding {
+    padding: 15px 25px;
+  }
+  .mobile-center {
+    text-align: center;
+  }
 }
 /* desktops & up */
 @media (min-width: 992px) {
   .right-vertical-line {
     border-right: 1px solid #DDD;
   }
+  .desktop-float-left {
+    float: left;
+  }
+  .desktop-float-right {
+    float: right;
+  }
+  .desktop-button-container-float-right > button {
+    float: right;
+  }
+  /* Resets mobile specific settings */
+  .mobile-center {
+    text-align: left;
+  }
+  .mobile-column-padding {
+    padding: 0;
+  }
+}
+
 }
 /* large desktops & up */
 @media (min-width: min-width: 1200px) {
