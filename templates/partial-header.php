@@ -26,6 +26,8 @@ $event_city = get_post_meta(get_the_id(), 'event_city', true);
 
 $future_event = (strtotime($event_date) >= strtotime(date('Y-m-d e', time())));
 
+$page_title = (is_single() || is_page() ? get_the_title() : single_cat_title("", false));
+
 ?>
 <div class="jumbotron partial-page-background" style="background-image: url('<?php echo $default_page_header_image; ?>');">
   <div class="container partial-header-container">
@@ -38,7 +40,7 @@ $future_event = (strtotime($event_date) >= strtotime(date('Y-m-d e', time())));
     <?php endif; ?>
     <div class="row">
       <div class="col-md-8 col-md-offset-2 partial-page-header-text">
-        <h1><?php get_page_title();?></h1>
+        <h1><?php echo $page_title;?></h1>
       </div>
     </div>
     <?php if (is_single() && ($event_date || $event_time || $event_location || $event_ticket_url)): ?>
