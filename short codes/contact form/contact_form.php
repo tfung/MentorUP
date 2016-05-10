@@ -10,7 +10,7 @@ function newsletter_modal_html() {
   $html = 
       '<button class="btn btn-custom-blue" data-toggle="modal" data-target="#newsletterModal">Sign Up</button>
 
-      <div id="newsletterModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div id="newsletterModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="text-align:left;">
         <div class="modal-dialog modal-vertical-adjustment" role="document">
           <div class="modal-content">
             <form id="newsletterForm" class="form-horizontal" method="post" action="'.admin_url('admin-ajax.php').'">

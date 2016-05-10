@@ -82,7 +82,7 @@ $partners_content = get_theme_mod('partners_content');
                 <div class="event">
                   <div class="event-date">
                     <span><?php echo date('M d', get_post_meta(get_the_id(), 'event_date', true)); ?></span>
-                    <span><?php echo date('g:iA', strtotime(get_post_meta(get_the_id(), 'event_start_time', true))); ?></span>
+                    <span><?php echo date('g:i A', strtotime(get_post_meta(get_the_id(), 'event_start_time', true))); ?></span>
                   </div>
                   <div class="event-description">
                     <span><?php the_title(); ?></span>

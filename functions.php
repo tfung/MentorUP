@@ -42,7 +42,7 @@ add_action( 'wp_enqueue_scripts', 'enqueue_javascript' );
 function enqueue_stylesheets()
 {
   wp_enqueue_style( 'bootstrap-navbar-theme-transparent_css', get_stylesheet_directory_uri() . "/assets/css/bootstrap-navbar-theme-transparent.css", array(), '1.0.0');
-  wp_enqueue_style( 'mentorup_css', get_stylesheet_directory_uri() . "/assets/css/mentorup.css", array('bootstrap-navbar-theme-transparent_css'), '2.0.0');
+  wp_enqueue_style( 'mentorup_css', get_stylesheet_directory_uri() . "/assets/css/mentorup.css", array('bootstrap-navbar-theme-transparent_css'), '2.0.1');
 }
 add_action('wp_enqueue_scripts','enqueue_stylesheets');
 

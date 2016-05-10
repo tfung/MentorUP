@@ -1,10 +1,12 @@
 html {
   height: 100%;
+  overflow-x:hidden;
 }
 
 body {
   background-color: #F9F9F9;
   font-family: 'Open Sans', sans-serif;
+  overflow-x:hidden;
 }
 
 section {
@@ -73,10 +75,6 @@ hr {
   font-weight: bold; 
   font-size: 22px; 
   color: #04708E;
-}
-
-.modal-vertical-adjustment {
-  margin-top: 30vh;
 }
 
 .section-padding {
@@ -490,6 +488,8 @@ hr {
   .mobile-center {
     text-align: center;
   }
+  .modal-vertical-adjustment {
+  }
 }
 /* desktops & up */
 @media (min-width: 992px) {
@@ -511,6 +511,9 @@ hr {
   }
   .mobile-column-padding {
     padding: 0;
+  }
+  .modal-vertical-adjustment {
+    margin-top: 30vh;
   }
 }
 
