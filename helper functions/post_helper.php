@@ -32,7 +32,7 @@ function facebook_meta_tags() {
     echo "<meta property=\"og:url\"             content=\"". get_permalink() ."\" />";
     echo "<meta property=\"og:type\"            content=\"article\" />";
     echo "<meta property=\"og:title\"           content=\"".get_the_title()."\" />";
-    echo "<meta property=\"og:description\"     content=\"".shorten_meta_post_content($post->post_content).".\" />";
+    //echo "<meta property=\"og:description\"     content=\"".shorten_meta_post_content($post->post_content).".\" />";
 
     if ($event_image)
       echo "<meta property=\"og:image\"     content=\"$event_image\" />";
