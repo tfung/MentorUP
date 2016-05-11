@@ -320,6 +320,13 @@ hr {
 .icon-padding {
   padding-right: 4px;
 }
+.icon-table-img {
+  display: table-cell;
+  width: 25px;
+}
+.icon-table-desc {
+  display: table-cell;
+}
 
 .post img {
   margin-bottom: 20px;
