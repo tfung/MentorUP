@@ -1,0 +1,28 @@
+.share-social-media {
+  margin-bottom: 25px;
+}
+.share-social-media > .share-button {
+  padding: 5px 10px;
+  background-color: #333;
+  margin-right: 5px;
+  color: #eee;
+  text-decoration: none;
+  border-radius: 2px;
+}
+.share-social-media > .share-button:hover,
+.share-social-media > .share-button:active {
+  opacity: 0.8;
+  text-decoration: none;
+}
+.share-social-media > .share-facebook {
+  background-color: #2d4372;
+}
+.share-social-media > .share-twitter {
+  background-color: #0084b4;
+}
+.share-social-media > .share-googleplus {
+  background-color: #D64937;
+}
+.share-social-media > .share-linkedin {
+  background-color: #1A84BC;
+}

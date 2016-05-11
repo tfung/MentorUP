@@ -50,10 +50,13 @@ $page_title = (is_single() || is_page() ? get_the_title() : single_cat_title("",
         <h3 class="partial-page-text-heavy"><?php echo $event_date; ?></h3>
         <?php endif; ?>
         <?php if ($event_time) : ?>
-        <h4><i class="fa fa-clock-o icon-padding" aria-hidden="true"></i> <?php echo $event_time; ?></h4>
+        <h4><i class="fa fa-clock-o icon-padding"></i> <?php echo $event_time; ?></h4>
         <?php endif; ?>
         <?php if ($event_location) : ?>
         <h4><i class="fa fa-map-marker icon-padding" style="padding-left: 2px;"></i> <?php echo $event_location; ?></h4>
+        <?php endif; ?>
+        <?php if ($event_ticket_cost) : ?>
+        <h4><i class="fa fa-usd icon-padding" style="padding-left: 2px;"></i> <?php echo $event_ticket_cost; ?></h4>
         <?php endif; ?>
       </div>
       <?php if ($event_ticket_url) : ?>

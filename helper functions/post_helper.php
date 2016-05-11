@@ -38,6 +38,35 @@ function facebook_meta_tags() {
       echo "<meta property=\"og:image\"     content=\"$event_image\" />";
   }
 }
-add_action('wp_head', 'facebook_meta_tags');
+
+function twitter_meta_tags() {
+  if (is_single()) {
+    echo "<meta name=\"twitter:site\" content=\"@MentorUpAlberta\">";
+    // everything else is done by facebook open graph
+  }
+}
+
+function get_share_url($social_media, $page_url) {
+  $url = '';
+
+  switch ($social_media) {
+    case 'facebook':
+      $url = "http://www.facebook.com/sharer/sharer.php?u=$page_url";
+      break;
+    case 'twitter':
+      $url = "https://twitter.com/share?url=$page_url";
+      break;
+    case 'googleplus':
+      $url = "https://plus.google.com/share?url=$page_url";
+      break;
+    case 'linkedin':
+      $url = "http://www.linkedin.com/shareArticle?mini=true&url=$page_url";
+      break;
+    default:
+      break;
+  }
+
+  return $url;
+}
 
 ?>

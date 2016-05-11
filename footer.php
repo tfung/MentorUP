@@ -50,7 +50,7 @@ $isDisplayNewsletterSignup = get_option('display_newsletter_signup');
         </div>
         <div class="col-md-8 col-md-pull-4 col-sm-12 col-xs-12 mobile-column-padding">
           <div class="mobile-column-padding mobile-center">
-            <span>© <?php echo date("Y"); ?>MentorUP Alberta | All Rights Reserved</span>
+            <span>© <?php echo date("Y"); ?> MentorUP Alberta | All Rights Reserved</span>
           </div>
         </div>
 
