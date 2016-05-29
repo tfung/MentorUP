@@ -38,11 +38,7 @@
 
   $(window).on('load', function () {
     adjustFooterPadding();
-
-    if (window.innerWidth <= 768) {
-      $('#navbar').removeClass('navbar-transparent');
-      $('#navbar').addClass('navbar-default');
-    }
+    setNavBarTheme();
   })
   .on('resize', function () {
     adjustFooterPadding();
