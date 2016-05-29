@@ -46,42 +46,12 @@ $partners_content = get_theme_mod('partners_content');
 <?php 
   // TODO: refactor out, limit current events
 
-  $query_events = array(
-    'meta_query' => array(
-      'events' => array(
-        'key' => 'event_date',
-        'value' => strtotime(date('Y-m-d e', time())),
-        'compare' => '>=',
-      )
-    ),
-    'orderby' => array(
-      'events' => 'ASC',
-    ),
-    //'posts_per_page' => 3,
-  );
-
-  $event_query = new WP_Query($query_events);
-
+  $event_query = get_upcoming_events();
   $has_upcoming_events = $event_query->post_count > 0;
 
   // if there are no current events, get past events instead
-  if (!$has_upcoming_events) {
-    $query_events = array(
-      'meta_query' => array(
-        'events' => array(
-          'key' => 'event_date',
-          'value' => strtotime(date('Y-m-d e', time())),
-          'compare' => '<',
-        )
-      ),
-      'orderby' => array(
-        'events' => 'DESC',
-      ),
-      'posts_per_page' => 3,
-    );
-
-    $event_query = new WP_Query($query_events);
-  }
+  if (!$has_upcoming_events)
+    $event_query = get_past_events(3);
 
 ?>
 
