@@ -44,21 +44,52 @@ $partners_content = get_theme_mod('partners_content');
 <hr class="hr-divider dark-blue-background">
 
 <?php 
+  // TODO: refactor out, limit current events
+
   $query_events = array(
     'meta_query' => array(
-      array(
+      'events' => array(
         'key' => 'event_date',
         'value' => strtotime(date('Y-m-d e', time())),
         'compare' => '>=',
-      )));
+      )
+    ),
+    'orderby' => array(
+      'events' => 'ASC',
+    ),
+    //'posts_per_page' => 3,
+  );
+
   $event_query = new WP_Query($query_events);
+
+  $has_upcoming_events = $event_query->post_count > 0;
+
+  // if there are no current events, get past events instead
+  if (!$has_upcoming_events) {
+    $query_events = array(
+      'meta_query' => array(
+        'events' => array(
+          'key' => 'event_date',
+          'value' => strtotime(date('Y-m-d e', time())),
+          'compare' => '<',
+        )
+      ),
+      'orderby' => array(
+        'events' => 'DESC',
+      ),
+      'posts_per_page' => 3,
+    );
+
+    $event_query = new WP_Query($query_events);
+  }
+
 ?>
 
 <section id="upcoming-events">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <h3 class="h3-header">Upcoming Events</h3>
+        <h3 class="h3-header"><?php echo ($has_upcoming_events ? 'Upcoming Events' : 'Recent Past Events');?></h3>
       </div>
 
       <div class="col-md-6">
@@ -98,7 +129,6 @@ $partners_content = get_theme_mod('partners_content');
             endif;
           ?>
         </ul>
-
       </div>
     </div>
   </div>
